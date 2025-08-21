@@ -42,22 +42,32 @@
   </style>
 </head>
 <body>
-  <header class="max-w-6xl mx-auto px-4 sm:px-6 pt-8 pb-4">
-    <div class="flex items-center gap-4">
-      <img src="Assets/nfl-logo.png" alt="NFL" class="w-14 h-14">
-      <div>
-        <h1 class="riddle-title text-3xl sm:text-4xl font-extrabold">NFL League — Regular Season</h1>
-        <p class="opacity-80 text-sm">Updated weekly from JSON — simple to edit, zero build step.</p>
-      </div>
-      <div class="ml-auto flex items-center gap-3">
-        <span class="inline-flex items-center gap-2 text-sm bg-black/50 px-3 py-2 rounded-xl ring-theme">
-          <span>Season</span>
-          <select id="seasonSelect" class="bg-transparent outline-none font-semibold"></select>
-        </span>
-        <a id="repoLink" class="underline text-sm opacity-90 hover:opacity-100" target="_blank" rel="noreferrer">View on GitHub</a>
-      </div>
-    </div>
-  </header>
+  <header class="max-w-xl mx-auto px-4 pt-6 pb-3">
+  <div class="flex items-center justify-center">
+    <img src="Assets/nfl-logo.png" alt="NFL" class="w-12 h-12 rounded-md shadow-lg">
+  </div>
+
+  <h1 class="riddle-title text-center font-extrabold mt-3"
+      style="font-size:clamp(1.4rem, 4.8vw, 2rem); line-height:1.15;">
+    NFL League
+    <span class="block">Regular Season</span>
+  </h1>
+
+  <p class="text-center opacity-80 text-base mt-2">
+    Updated weekly from JSON — simple to edit, zero build step.
+  </p>
+
+  <!-- compact toolbar -->
+  <div class="mt-4 flex items-center justify-center gap-3">
+    <span class="inline-flex items-center gap-2 bg-black/50 px-3 py-2 rounded-xl ring-theme">
+      <span class="text-sm">Season</span>
+      <select id="seasonSelect" class="bg-transparent outline-none font-semibold text-sm"></select>
+    </span>
+
+    <a id="repoLink" class="text-sm underline opacity-90 hover:opacity-100"
+       target="_blank" rel="noreferrer">View on GitHub</a>
+  </div>
+</header>
 
   <main class="max-w-6xl mx-auto px-4 sm:px-6 pb-24 space-y-6">
     <!-- Leaderboard -->
