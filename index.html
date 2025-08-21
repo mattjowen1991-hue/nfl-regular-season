@@ -1,29 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NFL League Scores</title>
-
-  <!-- Fonts (optional) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&display=swap" rel="stylesheet">
-
-  <!-- Tailwind (utilities used throughout) -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
   <style>
     :root { --line: rgba(255,255,255,0.15); --theme:#2563eb; }
+
     body{
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      /* Gradient OVER the field photo (top layer first) */
       background:
         linear-gradient(to bottom, rgba(0,0,0,.55), rgba(0,0,0,.85)),
         url('Assets/football-field.jpeg') center / cover no-repeat scroll;
       color:#fff;
-      margin:0; min-height:100vh;
+      margin:0;
+      min-height:100vh;
     }
+
     .riddle-title { font-family: Cinzel, serif; letter-spacing:.02em; }
     .card { background: rgba(0,0,0,.50); border:1px solid var(--line); border-radius:1rem; box-shadow:0 4px 12px rgba(0,0,0,.5); }
     .tab-btn, .pill { background: rgba(255,255,255,.10); border:1px solid var(--line); color:#fff; transition:background .2s; }
@@ -32,38 +25,56 @@
     .avatar{ width:48px; height:48px; border-radius:50%; object-fit:cover; }
     .grid-auto{ display:grid; grid-template-columns: repeat(auto-fill, minmax(200px,1fr)); gap:1rem; }
     .ring-theme{ box-shadow:0 0 0 3px rgba(37,99,235,.35); }
+
     @media (max-width: 640px){
       header .riddle-title{ font-size:1.5rem }
       .card{ padding:1rem !important }
       .tab-btn, .pill{ font-size:1rem; padding:.5rem 1rem }
     }
 
-    /* Modal basics */
-    .modal-backdrop{ position:fixed; inset:0; background:rgba(0,0,0,.55); display:none; z-index:50; }
-    .modal-backdrop.open{ display:flex; align-items:center; justify-content:center; }
+    /* Modal styles */
+    .modal-backdrop {
+      position:fixed; inset:0;
+      background:rgba(0,0,0,.55);
+      display:none; z-index:50;
+    }
+    .modal-backdrop.open {
+      display:flex; align-items:center; justify-content:center;
+    }
+    /* Solid rules modal */
+    .modal-backdrop .card {
+      background:#111;              /* solid dark */
+      border:1px solid var(--line);
+      border-radius:1rem;
+      max-width:600px;
+      padding:1.5rem;
+      margin:1rem;
+      box-shadow:0 8px 20px rgba(0,0,0,.6);
+    }
   </style>
 </head>
 <body>
-  <!-- Header -->
-  <header class="max-w-xl mx-auto px-4 pt-6 pb-3 text-center">
+  <header class="max-w-xl mx-auto px-4 pt-6 pb-3">
     <div class="flex items-center justify-center">
       <img src="Assets/nfl-logo.png" alt="NFL" class="w-12 h-12 rounded-md shadow-lg">
     </div>
-    <h1 class="riddle-title font-extrabold mt-3" style="font-size:clamp(1.4rem, 4.8vw, 2rem); line-height:1.15;">
+    <h1 class="riddle-title text-center font-extrabold mt-3"
+        style="font-size:clamp(1.4rem, 4.8vw, 2rem); line-height:1.15;">
       NFL League
       <span class="block">Regular Season</span>
     </h1>
-    <p class="opacity-80 text-base mt-2">Updated weekly from JSON — simple to edit, zero build step.</p>
-
-    <!-- Toolbar: Rules + GitHub -->
+    <p class="text-center opacity-80 text-base mt-2">
+      Updated weekly from JSON — simple to edit, zero build step.
+    </p>
     <div class="mt-4 flex items-center justify-center gap-3">
-      <button id="rulesBtn" class="tab-btn px-3 py-2 rounded-lg text-sm">Rules</button>
-      <a id="repoLink" class="text-sm underline opacity-90 hover:opacity-100" target="_blank" rel="noreferrer">View on GitHub</a>
+      <button id="rulesBtn" class="tab-btn px-3 py-1.5 rounded-lg text-sm">Rules</button>
+      <a id="repoLink" class="text-sm underline opacity-90 hover:opacity-100"
+         target="_blank" rel="noreferrer">View on GitHub</a>
     </div>
   </header>
 
   <main class="max-w-6xl mx-auto px-4 sm:px-6 pb-24 space-y-6">
-    <!-- Weekly Scores -->
+    <!-- Weekly Scores Card -->
     <section class="card p-5 sm:p-7">
       <div class="flex items-center justify-between">
         <h2 class="riddle-title text-2xl sm:text-3xl font-extrabold">Weekly Scores</h2>
@@ -94,38 +105,32 @@
 
   <!-- Rules Modal -->
   <div id="rulesModal" class="modal-backdrop">
-    <div class="card max-w-md w-[92vw] p-5 sm:p-6 relative">
-      <button id="rulesClose" class="absolute top-2 right-2 text-xl leading-none px-2">×</button>
-      <h3 class="riddle-title text-2xl font-extrabold mb-2 text-center">League Rules</h3>
-      <p class="text-sm opacity-80 mb-3 text-center">Quick reference for scoring.</p>
-      <ol class="list-decimal pl-5 space-y-2 text-sm leading-6">
-        <li><b>Predictions:</b> Submit Sunday game score picks before <b>6 PM UK</b>.</li>
-        <li><b>Scoring:</b> Each correct prediction earns <b>1 point</b>.</li>
-        <li><b>Perfect Week:</b> Get all Sunday games correct for <b>+2 bonus</b>.</li>
-        <li><b>Specials:</b> <i>Thanksgiving</i> and <i>International</i> games score <b>double</b>.</li>
-        <li><b>Ties:</b> If tied totals, shared position (no tiebreaker).</li>
-      </ol>
-      <div class="mt-5 text-right">
-        <button id="rulesOk" class="tab-btn px-4 py-2 rounded-lg">Got it</button>
-      </div>
+    <div class="card">
+      <h3 class="riddle-title text-xl font-extrabold mb-3">League Rules</h3>
+      <p class="mb-2">1. Each player selects their picks before the weekly deadline.</p>
+      <p class="mb-2">2. Scoring is based on weekly performance (points tallied from JSON).</p>
+      <p class="mb-2">3. Ties are broken by total season score.</p>
+      <p class="mb-2">4. Have fun and respect fellow players!</p>
+      <button id="closeRules" class="tab-btn mt-4 px-3 py-1.5 rounded-lg text-sm">Close</button>
     </div>
   </div>
 
   <script>
-    // ---------- Data helpers / config ----------
-    const paths = { players:'players.json', weeks:'weeks.json', config:'config.json' };
-
-    async function loadJSON(url){
-      const res = await fetch(url + `?v=${Date.now()}`, { cache:'no-store' });
-      if(!res.ok) throw new Error(`Failed to load ${url} (${res.status})`);
-      return res.json();
+    function medal(rank){
+      if(rank===0) return {emoji:"🥇", color:"from-yellow-400 to-yellow-600", name:"Gold"};
+      if(rank===1) return {emoji:"🥈", color:"from-gray-300 to-gray-500", name:"Silver"};
+      if(rank===2) return {emoji:"🥉", color:"from-amber-600 to-amber-800", name:"Bronze"};
+      return null;
     }
 
-    function compute({ players, weeks }){
+    function compute(tables){
+      const { players, weeks } = tables;
       const byId = Object.fromEntries(players.map(p=>[p.id,p]));
       const weekNums = [...new Set(weeks.map(w=>w.week))].sort((a,b)=>a-b);
+
       const totals = players.map(p=>({ id:p.id, name:p.name, avatar:p.avatar, total:0, perWeek:{} }));
       const idx = Object.fromEntries(totals.map(t=>[t.id,t]));
+
       weeks.forEach(w=>{
         const scores = w.scores || {};
         for(const [pid,pts] of Object.entries(scores)){
@@ -135,31 +140,26 @@
           t.perWeek[w.week] = val;
         }
       });
-      return { playersById:byId, totals, weekNums };
-    }
 
-    function medal(rank){
-      if(rank===0) return {emoji:"🥇", color:"from-yellow-400 to-yellow-600", name:"Gold"};
-      if(rank===1) return {emoji:"🥈", color:"from-gray-300 to-gray-500", name:"Silver"};
-      if(rank===2) return {emoji:"🥉", color:"from-amber-600 to-amber-800", name:"Bronze"};
-      return null;
+      return { playersById:byId, totals, weekNums };
     }
 
     function playerCard(p, rank, view, selectedWeek){
       const m = medal(rank);
       let value = p.total, label = 'Total';
       if(view==='week'){ value = p.perWeek[selectedWeek]||0; label = `Week ${selectedWeek}`; }
+
       return `
-        <article class="relative bg-black/70 rounded-2xl p-4 border" style="border-color:var(--line);">
-          ${m ? `<div class="absolute -top-4 -right-3 bg-gradient-to-b ${m.color} text-xl rounded-full w-12 h-12 grid place-items-center" title="${m.name}">${m.emoji}</div>` : ''}
+        <article class="relative bg-black/70 rounded-2xl p-4 border border-[var(--line)] hover:-translate-y-[2px] transition">
+          ${m ? `<div class=\"absolute -top-4 -right-3 bg-gradient-to-b ${m.color} text-xl rounded-full w-12 h-12 grid place-items-center medal\" title=\"${m.name}\">${m.emoji}</div>` : ''}
           <div class="flex items-center gap-3">
-            <img src="${p.avatar}" alt="${p.name}" class="avatar" style="border:1px solid var(--line)">
+            <img src="${p.avatar}" alt="${p.name}" class="avatar border border-[var(--line)]">
             <div class="min-w-0">
               <div class="font-extrabold text-lg truncate">${p.name}</div>
             </div>
           </div>
           <div class="mt-3 grid text-center">
-            <div class="rounded-xl" style="border:1px solid var(--line); padding:.75rem 0;">
+            <div class="rounded-xl border border-[var(--line)] py-3">
               <div class="text-xs opacity-80">${label}</div>
               <div class="text-2xl font-extrabold">${value}</div>
             </div>
@@ -170,57 +170,29 @@
     function renderLeaderboard(totals, view, selectedWeek){
       const sorted = [...totals].sort((a,b)=>{
         if(view==='week') return (b.perWeek[selectedWeek]||0) - (a.perWeek[selectedWeek]||0);
-        return (b.total||0) - (a.total||0);
+        return b.total - a.total;
       });
       document.getElementById('leaderboard').innerHTML =
         sorted.map((p,i)=>playerCard(p,i,view,selectedWeek)).join('');
     }
 
-    function renderHighlight(cfg, playersById){
-      const el = document.getElementById('highlight');
-      const w = cfg?.highlight?.winner && playersById[cfg.highlight.winner];
-      const s = cfg?.highlight?.spoon  && playersById[cfg.highlight.spoon];
-      el.innerHTML = `
-        <div class="text-center">
-          <h4 class="font-bold text-lg mb-2">${cfg?.season ? cfg.season + ' Season Winner' : 'Season Winner'}</h4>
-          ${w ? `<div class="mx-auto w-24 h-24 rounded-full overflow-hidden border-4 border-yellow-500 mb-2"><img src="${w.avatar}" alt="${w.name}" class="w-full h-full object-cover"></div><div class="font-extrabold">${w.name}</div>` : '<div class="opacity-60">TBD</div>'}
-        </div>
-        <div class="text-center">
-          <h4 class="font-bold text-lg mb-2">🥄 Wooden Spoon</h4>
-          ${s ? `<div class="mx-auto w-24 h-24 rounded-full overflow-hidden border-4 border-red-500 mb-2"><img src="${s.avatar}" alt="${s.name}" class="w-full h-full object-cover"></div><div class="font-extrabold">${s.name}</div>` : '<div class="opacity-60">TBD</div>'}
-        </div>`;
+    async function loadJSON(path){
+      const res = await fetch(path);
+      if(!res.ok) throw new Error("Failed to load "+path);
+      return await res.json();
     }
 
-    function renderHonorary(cfg, playersById){
-      const el = document.getElementById('honorary');
-      const items = (cfg?.honorary || [])
-        .sort((a,b)=>b.year-a.year)
-        .map(h=>{
-          const p = playersById[h.player] || { name:h.player, avatar:'Assets/football2.jpg' };
-          return `
-            <div class="text-center">
-              <div class="mx-auto w-20 h-20 rounded-full overflow-hidden border-2" style="border-color:var(--line)">
-                <img src="${p.avatar}" alt="${p.name}" class="w-full h-full object-cover">
-              </div>
-              <div class="text-sm font-semibold mt-2">${h.year} — ${p.name}</div>
-            </div>`;
-        }).join('');
-      el.innerHTML = items || '<div class="opacity-60 text-center">No honorary winners yet.</div>';
+    const paths = {
+      players: "players.json",
+      weeks: "weeks.json",
+      config: "config.json"
+    };
+
+    function setupSeasons(cfg){
+      const repoLink = document.getElementById('repoLink');
+      if(repoLink) repoLink.href = cfg.repoUrl || '#';
     }
 
-    // Rules modal wiring
-    function setupRules(){
-      const modal = document.getElementById('rulesModal');
-      const open  = ()=> modal.classList.add('open');
-      const close = ()=> modal.classList.remove('open');
-      document.getElementById('rulesBtn')  .addEventListener('click', open);
-      document.getElementById('rulesClose').addEventListener('click', close);
-      document.getElementById('rulesOk')   .addEventListener('click', close);
-      modal.addEventListener('click', e=>{ if(e.target===modal) close(); });
-      document.addEventListener('keydown', e=>{ if(e.key==='Escape') close(); });
-    }
-
-    // ---------- Boot ----------
     (async function boot(){
       try{
         const [players, weeks, config] = await Promise.all([
@@ -230,43 +202,36 @@
         ]);
 
         const state = compute({ players, weeks });
-
-        // Populate week dropdown
         const weekSel = document.getElementById('weekSelect');
         weekSel.innerHTML = state.weekNums.map(w=>`<option value="${w}">Week ${w}</option>`).join('');
         if(state.weekNums.length) weekSel.value = String(state.weekNums[state.weekNums.length-1]);
 
-        // Initial renders
-        renderLeaderboard(state.totals, 'total'); // Total first
-        renderHighlight(config, state.playersById);
-        renderHonorary(config, state.playersById);
+        // initial render → Total
+        renderLeaderboard(state.totals, 'total');
 
-        // Wire interactions
-        const totalBtn = document.getElementById('totalBtn');
-        totalBtn.addEventListener('click', ()=>{
-          totalBtn.setAttribute('aria-selected','true');
+        // hook up total button
+        document.getElementById('totalBtn').addEventListener('click', ()=>{
           renderLeaderboard(state.totals, 'total');
         });
+
+        // hook up week select
         weekSel.addEventListener('change', ()=>{
-          totalBtn.setAttribute('aria-selected','false');
           renderLeaderboard(state.totals, 'week', Number(weekSel.value));
         });
 
-        // GitHub link (leave or set to '#')
-        const repoLink = document.getElementById('repoLink');
-        if(repoLink) repoLink.href = config?.repoUrl || '#';
+        // other renderers
+        setupSeasons(config);
+
+        // footer year
+        document.getElementById('copyrightYear').textContent = new Date().getFullYear();
 
         // Rules modal
-        setupRules();
+        const modal = document.getElementById('rulesModal');
+        document.getElementById('rulesBtn').addEventListener('click', ()=> modal.classList.add('open'));
+        document.getElementById('closeRules').addEventListener('click', ()=> modal.classList.remove('open'));
 
-        // Footer year
-        document.getElementById('copyrightYear').textContent = new Date().getFullYear();
       }catch(err){
         console.error(err);
-        const msg = document.createElement('div');
-        msg.className = 'fixed bottom-4 left-1/2 -translate-x-1/2 bg-red-600 text-white px-4 py-2 rounded-xl text-sm shadow-lg';
-        msg.textContent = err.message;
-        document.body.appendChild(msg);
       }
     })();
   </script>
