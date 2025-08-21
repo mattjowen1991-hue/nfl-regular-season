@@ -2,8 +2,8 @@
   "season": "2024",
   "repoUrl": "https://github.com/your/repo",
   "highlight": {
-    "winner": "matt",   // <-- must match players.json id
-    "spoon":  "ste"     // <-- must match players.json id
+    "winner": "matt",
+    "spoon": "ste"
   },
   "honorary": [
     { "year": 2024, "player": "matt" },
