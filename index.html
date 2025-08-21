@@ -120,29 +120,33 @@
   const el = document.getElementById('highlight');
   if(!el) return;
 
-  const winner = cfg?.highlight?.winner && playersById[cfg.highlight.winner];
-  const spoon  = cfg?.highlight?.spoon  && playersById[cfg.highlight.spoon];
+  const wId = cfg?.highlight?.winner;
+  const sId = cfg?.highlight?.spoon;
+  const w = wId && playersById[wId];
+  const s = sId && playersById[sId];
 
   el.innerHTML = `
-    <div class="text-center">
-      <h4 class="font-bold text-lg mb-2">${cfg?.season ? `${cfg.season} Season Winner` : 'Season Winner'}</h4>
+    <div class="text-center space-y-2">
+      <h4 class="font-extrabold text-amber-400 text-xl sm:text-2xl">
+        ${cfg?.season ? `${cfg.season} Season Winner!` : 'Season Winner!'}
+      </h4>
       ${
-        winner
-          ? `<div class="mx-auto w-24 h-24 rounded-full overflow-hidden border-4 border-yellow-500 mb-2">
-               <img src="${winner.avatar}" alt="${winner.name}" class="w-full h-full object-cover">
+        w
+          ? `<div class="mx-auto w-28 h-28 rounded-full overflow-hidden ring-4 ring-amber-400 shadow-lg">
+               <img src="${w.avatar}" alt="${w.name}" class="w-full h-full object-cover">
              </div>
-             <div class="font-extrabold">${winner.name}</div>`
+             <div class="font-extrabold text-lg">${w.name}</div>`
           : `<div class="opacity-60">TBD</div>`
       }
     </div>
-    <div class="text-center">
-      <h4 class="font-bold text-lg mb-2">🥄 Wooden Spoon</h4>
+    <div class="text-center space-y-2">
+      <h4 class="font-extrabold text-xl sm:text-2xl">🥄 Current Wooden Spoon Holder!</h4>
       ${
-        spoon
-          ? `<div class="mx-auto w-24 h-24 rounded-full overflow-hidden border-4 border-red-500 mb-2">
-               <img src="${spoon.avatar}" alt="${spoon.name}" class="w-full h-full object-cover">
+        s
+          ? `<div class="mx-auto w-28 h-28 rounded-full overflow-hidden ring-4 ring-red-400 shadow-lg">
+               <img src="${s.avatar}" alt="${s.name}" class="w-full h-full object-cover">
              </div>
-             <div class="font-extrabold">${spoon.name}</div>`
+             <div class="font-extrabold text-lg">${s.name}</div>`
           : `<div class="opacity-60">TBD</div>`
       }
     </div>
@@ -153,23 +157,26 @@ function renderHonorary(cfg, playersById){
   const el = document.getElementById('honorary');
   if(!el) return;
 
-  const list = (cfg?.honorary || [])
-    .slice()                               // non-destructive
-    .sort((a,b)=> b.year - a.year)         // newest first
-    .map(item => {
-      const p = playersById[item.player] || { name:item.player, avatar:'Assets/football2.jpg' };
+  const items = (cfg?.honorary || [])
+    .slice()
+    .sort((a,b)=> b.year - a.year)  // newest first
+    .map(h=>{
+      const p = playersById[h.player] || { name:h.player, avatar:'Assets/football2.jpg' };
       return `
-        <div class="text-center">
-          <div class="mx-auto w-20 h-20 rounded-full overflow-hidden border-2" style="border-color:var(--line)">
+        <div class="flex flex-col items-center gap-2">
+          <div class="w-24 h-24 rounded-full overflow-hidden ring-4 ring-amber-400 shadow">
             <img src="${p.avatar}" alt="${p.name}" class="w-full h-full object-cover">
           </div>
-          <div class="text-sm font-semibold mt-2">${item.year} — ${p.name}</div>
-        </div>
-      `;
+          <div class="text-base font-bold">${h.year} - ${p.name}</div>
+        </div>`;
     }).join('');
 
-  el.innerHTML = list || '<div class="opacity-60 text-center">No honorary winners yet.</div>';
+  // Mobile = vertical list; ≥640px = nice grid
+  el.innerHTML = items
+    ? `<div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3">${items}</div>`
+    : '<div class="opacity-60 text-center">No honorary winners yet.</div>';
 }
+
     
     function medal(rank){
       if(rank===0) return {emoji:"🥇", color:"from-yellow-400 to-yellow-600", name:"Gold"};
