@@ -6,8 +6,5 @@
 { "id": "ben", "name": "Ben", "avatar": "Assets/ben.png" },
 { "id": "coley", "name": "Coley", "avatar": "Assets/coley.png" },
 { "id": "mark", "name": "Mark", "avatar": "Assets/mark.png" },
-{ "id": "lee", "name": "Lee", "avatar": "Assets/lee.png" },
-{ "id": "liam", "name": "Liam", "avatar": "Assets/liam.png" },
-{ "id": "donuts", "name": "Donuts", "avatar": "Assets/donuts.png" },
 { "id": "ste", "name": "Ste", "avatar": "Assets/ste.png" }
 ]
