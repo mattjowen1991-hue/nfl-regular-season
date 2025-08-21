@@ -4,6 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NFL League Scores</title>
+
+  <!-- Tailwind utilities used across the markup -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Optional heading font (matches your style) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&display=swap" rel="stylesheet">
+
   <style>
     :root { --line: rgba(255,255,255,0.15); --theme:#2563eb; }
 
@@ -12,9 +20,7 @@
       background:
         linear-gradient(to bottom, rgba(0,0,0,.55), rgba(0,0,0,.85)),
         url('Assets/football-field.jpeg') center / cover no-repeat scroll;
-      color:#fff;
-      margin:0;
-      min-height:100vh;
+      color:#fff; margin:0; min-height:100vh;
     }
 
     .riddle-title { font-family: Cinzel, serif; letter-spacing:.02em; }
@@ -33,23 +39,13 @@
     }
 
     /* Modal styles */
-    .modal-backdrop {
-      position:fixed; inset:0;
-      background:rgba(0,0,0,.55);
-      display:none; z-index:50;
-    }
-    .modal-backdrop.open {
-      display:flex; align-items:center; justify-content:center;
-    }
+    .modal-backdrop { position:fixed; inset:0; background:rgba(0,0,0,.55); display:none; z-index:50; }
+    .modal-backdrop.open { display:flex; align-items:center; justify-content:center; }
+
     /* Solid rules modal */
     .modal-backdrop .card {
-      background:#111;              /* solid dark */
-      border:1px solid var(--line);
-      border-radius:1rem;
-      max-width:600px;
-      padding:1.5rem;
-      margin:1rem;
-      box-shadow:0 8px 20px rgba(0,0,0,.6);
+      background:#111; border:1px solid var(--line); border-radius:1rem;
+      max-width:600px; padding:1.5rem; margin:1rem; box-shadow:0 8px 20px rgba(0,0,0,.6);
     }
   </style>
 </head>
@@ -68,8 +64,7 @@
     </p>
     <div class="mt-4 flex items-center justify-center gap-3">
       <button id="rulesBtn" class="tab-btn px-3 py-1.5 rounded-lg text-sm">Rules</button>
-      <a id="repoLink" class="text-sm underline opacity-90 hover:opacity-100"
-         target="_blank" rel="noreferrer">View on GitHub</a>
+      <a id="repoLink" class="text-sm underline opacity-90 hover:opacity-100" target="_blank" rel="noreferrer">View on GitHub</a>
     </div>
   </header>
 
@@ -106,12 +101,17 @@
   <!-- Rules Modal -->
   <div id="rulesModal" class="modal-backdrop">
     <div class="card">
-      <h3 class="riddle-title text-xl font-extrabold mb-3">League Rules</h3>
-      <p class="mb-2">1. Each player selects their picks before the weekly deadline.</p>
-      <p class="mb-2">2. Scoring is based on weekly performance (points tallied from JSON).</p>
-      <p class="mb-2">3. Ties are broken by total season score.</p>
-      <p class="mb-2">4. Have fun and respect fellow players!</p>
-      <button id="closeRules" class="tab-btn mt-4 px-3 py-1.5 rounded-lg text-sm">Close</button>
+      <h3 class="riddle-title text-xl font-extrabold mb-3 text-center">League Rules</h3>
+      <ol class="list-decimal pl-5 space-y-2 text-sm leading-6">
+        <li>Submit Sunday game picks before <b>6 PM UK</b>.</li>
+        <li>Each correct prediction earns <b>1 point</b>.</li>
+        <li><b>Perfect Week:</b> all Sunday games correct = <b>+2 bonus</b>.</li>
+        <li><b>Specials:</b> Thanksgiving & International games score <b>double</b>.</li>
+        <li>Ties are shared positions (no tiebreaker).</li>
+      </ol>
+      <div class="mt-4 text-right">
+        <button id="closeRules" class="tab-btn px-3 py-1.5 rounded-lg text-sm">Close</button>
+      </div>
     </div>
   </div>
 
@@ -151,7 +151,7 @@
 
       return `
         <article class="relative bg-black/70 rounded-2xl p-4 border border-[var(--line)] hover:-translate-y-[2px] transition">
-          ${m ? `<div class=\"absolute -top-4 -right-3 bg-gradient-to-b ${m.color} text-xl rounded-full w-12 h-12 grid place-items-center medal\" title=\"${m.name}\">${m.emoji}</div>` : ''}
+          ${m ? `<div class="absolute -top-4 -right-3 bg-gradient-to-b ${m.color} text-xl rounded-full w-12 h-12 grid place-items-center" title="${m.name}">${m.emoji}</div>` : ''}
           <div class="flex items-center gap-3">
             <img src="${p.avatar}" alt="${p.name}" class="avatar border border-[var(--line)]">
             <div class="min-w-0">
@@ -182,16 +182,7 @@
       return await res.json();
     }
 
-    const paths = {
-      players: "players.json",
-      weeks: "weeks.json",
-      config: "config.json"
-    };
-
-    function setupSeasons(cfg){
-      const repoLink = document.getElementById('repoLink');
-      if(repoLink) repoLink.href = cfg.repoUrl || '#';
-    }
+    const paths = { players:"players.json", weeks:"weeks.json", config:"config.json" };
 
     (async function boot(){
       try{
@@ -206,32 +197,35 @@
         weekSel.innerHTML = state.weekNums.map(w=>`<option value="${w}">Week ${w}</option>`).join('');
         if(state.weekNums.length) weekSel.value = String(state.weekNums[state.weekNums.length-1]);
 
-        // initial render → Total
-        renderLeaderboard(state.totals, 'total');
+        renderLeaderboard(state.totals, 'total'); // Total first
 
-        // hook up total button
         document.getElementById('totalBtn').addEventListener('click', ()=>{
+          document.getElementById('totalBtn').setAttribute('aria-selected','true');
           renderLeaderboard(state.totals, 'total');
         });
-
-        // hook up week select
         weekSel.addEventListener('change', ()=>{
+          document.getElementById('totalBtn').setAttribute('aria-selected','false');
           renderLeaderboard(state.totals, 'week', Number(weekSel.value));
         });
 
-        // other renderers
-        setupSeasons(config);
-
-        // footer year
-        document.getElementById('copyrightYear').textContent = new Date().getFullYear();
+        // Repo link if provided
+        const repoLink = document.getElementById('repoLink');
+        if(repoLink) repoLink.href = config.repoUrl || '#';
 
         // Rules modal
         const modal = document.getElementById('rulesModal');
         document.getElementById('rulesBtn').addEventListener('click', ()=> modal.classList.add('open'));
         document.getElementById('closeRules').addEventListener('click', ()=> modal.classList.remove('open'));
+        modal.addEventListener('click', e=>{ if(e.target===modal) modal.classList.remove('open'); });
 
+        // Footer year
+        document.getElementById('copyrightYear').textContent = new Date().getFullYear();
       }catch(err){
         console.error(err);
+        const msg = document.createElement('div');
+        msg.className = 'fixed bottom-4 left-1/2 -translate-x-1/2 bg-red-600 text-white px-4 py-2 rounded-xl text-sm shadow-lg';
+        msg.textContent = err.message;
+        document.body.appendChild(msg);
       }
     })();
   </script>
