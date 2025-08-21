@@ -1,8 +1,4 @@
 <!doctype html>
-tabs.forEach(btn=>{
-btn.addEventListener('click', ()=>{
-tabs.forEach(x=>x.setAttribute('aria-selected','false'));
-btn.setAttribute('aria-selected','true');
 const view = btn.dataset.view;
 renderLeaderboard(state.totals, view, Number(weekSel.value));
 });
