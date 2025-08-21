@@ -1,0 +1,71 @@
+<!doctype html>
+tabs.forEach(btn=>{
+btn.addEventListener('click', ()=>{
+tabs.forEach(x=>x.setAttribute('aria-selected','false'));
+btn.setAttribute('aria-selected','true');
+const view = btn.dataset.view;
+renderLeaderboard(state.totals, view, Number(weekSel.value));
+});
+});
+weekSel.addEventListener('change', ()=>{
+const selected = document.querySelector('.tab-btn[aria-selected="true"]');
+const view = selected ? selected.dataset.view : 'total';
+renderLeaderboard(state.totals, view, Number(weekSel.value));
+});
+}
+
+
+function setupSeasons(cfg){
+const sel = document.getElementById('seasonSelect');
+const seasons = (cfg.allSeasons||[]);
+sel.innerHTML = [cfg.season, ...seasons.filter(s=>s!==cfg.season)].map(s=>`<option value="${s}">${s}</option>`).join('');
+return sel;
+}
+
+
+(async function boot(){
+try{
+const [players, weeks, config] = await Promise.all([
+loadJSON(paths.players),
+loadJSON(paths.weeks),
+loadJSON(paths.config).catch(()=>({}))
+]);
+
+
+// apply repo link
+const repoLink = document.getElementById('repoLink');
+if(repoLink) repoLink.href = config.repoUrl || '#';
+
+
+// footer year
+document.getElementById('copyrightYear').textContent = new Date().getFullYear();
+
+
+// populate season + weeks select
+const state = compute({ players, weeks });
+const weekSel = document.getElementById('weekSelect');
+weekSel.innerHTML = state.weekNums.map(w=>`<option value="${w}">Week ${w}</option>`).join('');
+if(state.weekNums.length) weekSel.value = String(state.weekNums[state.weekNums.length-1]);
+
+
+// render all UI
+renderLeaderboard(state.totals, 'total', Number(weekSel.value));
+renderWeekly(state.weekNums, state.totals);
+renderHighlight(config, state.playersById);
+renderHonorary(config, state.playersById);
+
+
+// wire tabs
+setupTabs(state);
+setupSeasons(config);
+}catch(err){
+console.error(err);
+const msg = document.createElement('div');
+msg.className = 'fixed bottom-4 left-1/2 -translate-x-1/2 bg-red-600 text-white px-4 py-2 rounded-xl text-sm shadow-lg';
+msg.textContent = err.message;
+document.body.appendChild(msg);
+}
+})();
+</script>
+</body>
+</html>
