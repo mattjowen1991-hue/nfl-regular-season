@@ -159,7 +159,7 @@ function renderHonorary(cfg, playersById){
 
   const items = (cfg?.honorary || [])
     .slice()
-    .sort((a,b)=> b.year - a.year)  // newest first
+    .sort((a,b)=> b.year - a.year) // newest first
     .map(h=>{
       const p = playersById[h.player] || { name:h.player, avatar:'Assets/football2.jpg' };
       return `
@@ -171,9 +171,11 @@ function renderHonorary(cfg, playersById){
         </div>`;
     }).join('');
 
-  // Mobile = vertical list; ≥640px = nice grid
   el.innerHTML = items
-    ? `<div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3">${items}</div>`
+    ? `
+      <div class="flex flex-col sm:flex-row sm:flex-wrap gap-6 justify-center">
+        ${items}
+      </div>`
     : '<div class="opacity-60 text-center">No honorary winners yet.</div>';
 }
 
