@@ -5,26 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>NFL League Scores</title>
 
-  <!-- Fonts (optional, for nicer headings) -->
+  <!-- Fonts (optional) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&display=swap" rel="stylesheet">
 
-  <!-- Tailwind (needed for all the utility classes used below) -->
+  <!-- Tailwind (utilities used throughout) -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
     :root { --line: rgba(255,255,255,0.15); --theme:#2563eb; }
     body{
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  /* Gradient OVER the field photo (first layer is on top) */
-  background:
-    linear-gradient(to bottom, rgba(0,0,0,.55), rgba(0,0,0,.85)),
-    url('Assets/football-field.jpeg') center / cover no-repeat scroll;
-  color:#fff;
-  margin:0;
-  min-height:100vh;
-}
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      /* Gradient OVER the field photo (top layer first) */
+      background:
+        linear-gradient(to bottom, rgba(0,0,0,.55), rgba(0,0,0,.85)),
+        url('Assets/football-field.jpeg') center / cover no-repeat scroll;
+      color:#fff;
+      margin:0; min-height:100vh;
+    }
     .riddle-title { font-family: Cinzel, serif; letter-spacing:.02em; }
     .card { background: rgba(0,0,0,.50); border:1px solid var(--line); border-radius:1rem; box-shadow:0 4px 12px rgba(0,0,0,.5); }
     .tab-btn, .pill { background: rgba(255,255,255,.10); border:1px solid var(--line); color:#fff; transition:background .2s; }
@@ -38,27 +37,27 @@
       .card{ padding:1rem !important }
       .tab-btn, .pill{ font-size:1rem; padding:.5rem 1rem }
     }
+
+    /* Modal basics */
+    .modal-backdrop{ position:fixed; inset:0; background:rgba(0,0,0,.55); display:none; z-index:50; }
+    .modal-backdrop.open{ display:flex; align-items:center; justify-content:center; }
   </style>
 </head>
 <body>
   <!-- Header -->
-  <header class="max-w-xl mx-auto px-4 pt-6 pb-3">
+  <header class="max-w-xl mx-auto px-4 pt-6 pb-3 text-center">
     <div class="flex items-center justify-center">
       <img src="Assets/nfl-logo.png" alt="NFL" class="w-12 h-12 rounded-md shadow-lg">
     </div>
-    <h1 class="riddle-title text-center font-extrabold mt-3"
-        style="font-size:clamp(1.4rem, 4.8vw, 2rem); line-height:1.15;">
+    <h1 class="riddle-title font-extrabold mt-3" style="font-size:clamp(1.4rem, 4.8vw, 2rem); line-height:1.15;">
       NFL League
       <span class="block">Regular Season</span>
     </h1>
-    <p class="text-center opacity-80 text-base mt-2">
-      Updated weekly from JSON — simple to edit, zero build step.
-    </p>
+    <p class="opacity-80 text-base mt-2">Updated weekly from JSON — simple to edit, zero build step.</p>
+
+    <!-- Toolbar: Rules + GitHub -->
     <div class="mt-4 flex items-center justify-center gap-3">
-      <span class="inline-flex items-center gap-2 bg-black/50 px-3 py-2 rounded-xl ring-theme">
-        <span class="text-sm">Season</span>
-        <select id="seasonSelect" class="bg-transparent outline-none font-semibold text-sm"></select>
-      </span>
+      <button id="rulesBtn" class="tab-btn px-3 py-2 rounded-lg text-sm">Rules</button>
       <a id="repoLink" class="text-sm underline opacity-90 hover:opacity-100" target="_blank" rel="noreferrer">View on GitHub</a>
     </div>
   </header>
@@ -92,6 +91,25 @@
   <footer class="text-center text-sm opacity-75 py-6">
     <p>&copy; <span id="copyrightYear"></span> NFL League</p>
   </footer>
+
+  <!-- Rules Modal -->
+  <div id="rulesModal" class="modal-backdrop">
+    <div class="card max-w-md w-[92vw] p-5 sm:p-6 relative">
+      <button id="rulesClose" class="absolute top-2 right-2 text-xl leading-none px-2">×</button>
+      <h3 class="riddle-title text-2xl font-extrabold mb-2 text-center">League Rules</h3>
+      <p class="text-sm opacity-80 mb-3 text-center">Quick reference for scoring.</p>
+      <ol class="list-decimal pl-5 space-y-2 text-sm leading-6">
+        <li><b>Predictions:</b> Submit Sunday game score picks before <b>6 PM UK</b>.</li>
+        <li><b>Scoring:</b> Each correct prediction earns <b>1 point</b>.</li>
+        <li><b>Perfect Week:</b> Get all Sunday games correct for <b>+2 bonus</b>.</li>
+        <li><b>Specials:</b> <i>Thanksgiving</i> and <i>International</i> games score <b>double</b>.</li>
+        <li><b>Ties:</b> If tied totals, shared position (no tiebreaker).</li>
+      </ol>
+      <div class="mt-5 text-right">
+        <button id="rulesOk" class="tab-btn px-4 py-2 rounded-lg">Got it</button>
+      </div>
+    </div>
+  </div>
 
   <script>
     // ---------- Data helpers / config ----------
@@ -164,7 +182,7 @@
       const s = cfg?.highlight?.spoon  && playersById[cfg.highlight.spoon];
       el.innerHTML = `
         <div class="text-center">
-          <h4 class="font-bold text-lg mb-2">${cfg?.season || ''} Season Winner</h4>
+          <h4 class="font-bold text-lg mb-2">${cfg?.season ? cfg.season + ' Season Winner' : 'Season Winner'}</h4>
           ${w ? `<div class="mx-auto w-24 h-24 rounded-full overflow-hidden border-4 border-yellow-500 mb-2"><img src="${w.avatar}" alt="${w.name}" class="w-full h-full object-cover"></div><div class="font-extrabold">${w.name}</div>` : '<div class="opacity-60">TBD</div>'}
         </div>
         <div class="text-center">
@@ -190,13 +208,16 @@
       el.innerHTML = items || '<div class="opacity-60 text-center">No honorary winners yet.</div>';
     }
 
-    function setupSeasons(cfg){
-      const sel = document.getElementById('seasonSelect');
-      const seasons = [cfg?.season, ...(cfg?.allSeasons||[]).filter(s=>s!==cfg?.season)].filter(Boolean);
-      sel.innerHTML = seasons.map(s=>`<option value="${s}">${s}</option>`).join('');
-      const repoLink = document.getElementById('repoLink');
-      if(repoLink) repoLink.href = cfg?.repoUrl || '#';
-      return sel;
+    // Rules modal wiring
+    function setupRules(){
+      const modal = document.getElementById('rulesModal');
+      const open  = ()=> modal.classList.add('open');
+      const close = ()=> modal.classList.remove('open');
+      document.getElementById('rulesBtn')  .addEventListener('click', open);
+      document.getElementById('rulesClose').addEventListener('click', close);
+      document.getElementById('rulesOk')   .addEventListener('click', close);
+      modal.addEventListener('click', e=>{ if(e.target===modal) close(); });
+      document.addEventListener('keydown', e=>{ if(e.key==='Escape') close(); });
     }
 
     // ---------- Boot ----------
@@ -208,16 +229,17 @@
           loadJSON(paths.config).catch(()=>({}))
         ]);
 
-        // Compute + initial UI
         const state = compute({ players, weeks });
+
+        // Populate week dropdown
         const weekSel = document.getElementById('weekSelect');
         weekSel.innerHTML = state.weekNums.map(w=>`<option value="${w}">Week ${w}</option>`).join('');
         if(state.weekNums.length) weekSel.value = String(state.weekNums[state.weekNums.length-1]);
 
-        renderLeaderboard(state.totals, 'total');           // Total first
+        // Initial renders
+        renderLeaderboard(state.totals, 'total'); // Total first
         renderHighlight(config, state.playersById);
         renderHonorary(config, state.playersById);
-        setupSeasons(config);
 
         // Wire interactions
         const totalBtn = document.getElementById('totalBtn');
@@ -225,11 +247,17 @@
           totalBtn.setAttribute('aria-selected','true');
           renderLeaderboard(state.totals, 'total');
         });
-
         weekSel.addEventListener('change', ()=>{
           totalBtn.setAttribute('aria-selected','false');
           renderLeaderboard(state.totals, 'week', Number(weekSel.value));
         });
+
+        // GitHub link (leave or set to '#')
+        const repoLink = document.getElementById('repoLink');
+        if(repoLink) repoLink.href = config?.repoUrl || '#';
+
+        // Rules modal
+        setupRules();
 
         // Footer year
         document.getElementById('copyrightYear').textContent = new Date().getFullYear();
