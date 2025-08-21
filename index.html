@@ -116,6 +116,61 @@
   </div>
 
   <script>
+    function renderHighlight(cfg, playersById){
+  const el = document.getElementById('highlight');
+  if(!el) return;
+
+  const winner = cfg?.highlight?.winner && playersById[cfg.highlight.winner];
+  const spoon  = cfg?.highlight?.spoon  && playersById[cfg.highlight.spoon];
+
+  el.innerHTML = `
+    <div class="text-center">
+      <h4 class="font-bold text-lg mb-2">${cfg?.season ? `${cfg.season} Season Winner` : 'Season Winner'}</h4>
+      ${
+        winner
+          ? `<div class="mx-auto w-24 h-24 rounded-full overflow-hidden border-4 border-yellow-500 mb-2">
+               <img src="${winner.avatar}" alt="${winner.name}" class="w-full h-full object-cover">
+             </div>
+             <div class="font-extrabold">${winner.name}</div>`
+          : `<div class="opacity-60">TBD</div>`
+      }
+    </div>
+    <div class="text-center">
+      <h4 class="font-bold text-lg mb-2">🥄 Wooden Spoon</h4>
+      ${
+        spoon
+          ? `<div class="mx-auto w-24 h-24 rounded-full overflow-hidden border-4 border-red-500 mb-2">
+               <img src="${spoon.avatar}" alt="${spoon.name}" class="w-full h-full object-cover">
+             </div>
+             <div class="font-extrabold">${spoon.name}</div>`
+          : `<div class="opacity-60">TBD</div>`
+      }
+    </div>
+  `;
+}
+
+function renderHonorary(cfg, playersById){
+  const el = document.getElementById('honorary');
+  if(!el) return;
+
+  const list = (cfg?.honorary || [])
+    .slice()                               // non-destructive
+    .sort((a,b)=> b.year - a.year)         // newest first
+    .map(item => {
+      const p = playersById[item.player] || { name:item.player, avatar:'Assets/football2.jpg' };
+      return `
+        <div class="text-center">
+          <div class="mx-auto w-20 h-20 rounded-full overflow-hidden border-2" style="border-color:var(--line)">
+            <img src="${p.avatar}" alt="${p.name}" class="w-full h-full object-cover">
+          </div>
+          <div class="text-sm font-semibold mt-2">${item.year} — ${p.name}</div>
+        </div>
+      `;
+    }).join('');
+
+  el.innerHTML = list || '<div class="opacity-60 text-center">No honorary winners yet.</div>';
+}
+    
     function medal(rank){
       if(rank===0) return {emoji:"🥇", color:"from-yellow-400 to-yellow-600", name:"Gold"};
       if(rank===1) return {emoji:"🥈", color:"from-gray-300 to-gray-500", name:"Silver"};
@@ -198,6 +253,9 @@
         if(state.weekNums.length) weekSel.value = String(state.weekNums[state.weekNums.length-1]);
 
         renderLeaderboard(state.totals, 'total'); // Total first
+
+        renderHighlight(config, state.playersById);
+        renderHonorary(config, state.playersById);
 
         document.getElementById('totalBtn').addEventListener('click', ()=>{
           document.getElementById('totalBtn').setAttribute('aria-selected','true');
