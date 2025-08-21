@@ -1,93 +1,109 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>NFL League — Scores & Leaderboard</title>
-  <meta name="description" content="Friends NFL League: weekly scores, leaderboard, and season highlights" />
-  <link rel="icon" href="Assets/nfl-favicon.png">
-
-  <!-- Fonts + Tailwind (CDN like your Riddle site) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NFL League Scores</title>
   <style>
-    :root{
-      --ink:#f2aa4c;                /* Gold text accent */
-      --accent:#f2aa4c;             /* Gold */
-      --card-bg:rgba(0,0,0,.80);    /* Card black */
-      --line:#f2aa4c;               /* Border gold */
-      --field:url('Assets/football-field.jpeg');
+    :root {
+      --line: rgba(255,255,255,0.15);
+      --theme: #2563eb;
     }
-    body{
-      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      color:var(--ink);
-      background: var(--field) no-repeat center/cover fixed;
-      min-height:100vh;
+
+    body {
+      font-family: system-ui, sans-serif;
+      background: linear-gradient(to bottom, #111, #222);
+      color: white;
+      margin: 0;
+      padding: 0;
     }
-    .riddle-title{ font-family:Cinzel, serif; letter-spacing:.02em; }
-    .card{ background:var(--card-bg); border:1.5px solid var(--line); border-radius:16px; box-shadow:0 10px 30px rgba(0,0,0,.45); }
-    .table th, .table td{ border:1px solid var(--line); }
-    .avatar{ width:36px; height:36px; border-radius:9999px; object-fit:cover; }
-    .grid-auto{ display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:16px; }
-    .pill{ background:#101820; color:#fff; border:1px solid var(--line); }
-    .tab-btn[aria-selected="true"]{ background:var(--accent); color:#101820; font-weight:800; }
-    .tab-btn[aria-selected="false"]:hover{ background:rgba(242,170,76,.25); }
-    .ring-theme{ box-shadow:0 0 0 3px rgba(242,170,76,.35); }
-    .collapse-body{ display:none; }
-    .collapse.open + .collapse-body{ display:block; }
-    .medal{ filter:drop-shadow(0 3px 6px rgba(0,0,0,.3)); }
+
+    header, main, footer {
+      max-width: 100%;
+    }
+
+    .card {
+      background: rgba(0,0,0,0.5);
+      border: 1px solid var(--line);
+      border-radius: 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    }
+
+    .riddle-title {
+      font-weight: 800;
+      letter-spacing: .02em;
+    }
+
+    .tab-btn, .pill {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid var(--line);
+      color: white;
+      cursor: pointer;
+      transition: background .2s;
+    }
+
+    .tab-btn[aria-selected="true"] {
+      background: var(--theme);
+    }
+
+    .pill {
+      border-radius: .75rem;
+    }
+
+    .avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+    }
+
+    .grid-auto {
+      display: grid;
+      grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+      gap: 1rem;
+    }
+
+    /* Mobile tweaks */
+    @media (max-width: 640px) {
+      header .riddle-title { font-size: 1.5rem; }
+      .card { padding: 1rem !important; }
+      .tab-btn, .pill { font-size: 1rem; padding: .5rem 1rem; }
+    }
   </style>
 </head>
 <body>
   <header class="max-w-xl mx-auto px-4 pt-6 pb-3">
-  <div class="flex items-center justify-center">
-    <img src="Assets/nfl-logo.png" alt="NFL" class="w-12 h-12 rounded-md shadow-lg">
-  </div>
-
-  <h1 class="riddle-title text-center font-extrabold mt-3"
-      style="font-size:clamp(1.4rem, 4.8vw, 2rem); line-height:1.15;">
-    NFL League
-    <span class="block">Regular Season</span>
-  </h1>
-
-  <p class="text-center opacity-80 text-base mt-2">
-    Updated weekly from JSON — simple to edit, zero build step.
-  </p>
-
-  <!-- compact toolbar -->
-  <div class="mt-4 flex items-center justify-center gap-3">
-    <span class="inline-flex items-center gap-2 bg-black/50 px-3 py-2 rounded-xl ring-theme">
-      <span class="text-sm">Season</span>
-      <select id="seasonSelect" class="bg-transparent outline-none font-semibold text-sm"></select>
-    </span>
-
-    <a id="repoLink" class="text-sm underline opacity-90 hover:opacity-100"
-       target="_blank" rel="noreferrer">View on GitHub</a>
-  </div>
-</header>
+    <div class="flex items-center justify-center">
+      <img src="Assets/nfl-logo.png" alt="NFL" class="w-12 h-12 rounded-md shadow-lg">
+    </div>
+    <h1 class="riddle-title text-center font-extrabold mt-3"
+        style="font-size:clamp(1.4rem, 4.8vw, 2rem); line-height:1.15;">
+      NFL League
+      <span class="block">Regular Season</span>
+    </h1>
+    <p class="text-center opacity-80 text-base mt-2">
+      Updated weekly from JSON — simple to edit, zero build step.
+    </p>
+    <div class="mt-4 flex items-center justify-center gap-3">
+      <span class="inline-flex items-center gap-2 bg-black/50 px-3 py-2 rounded-xl ring-theme">
+        <span class="text-sm">Season</span>
+        <select id="seasonSelect" class="bg-transparent outline-none font-semibold text-sm"></select>
+      </span>
+      <a id="repoLink" class="text-sm underline opacity-90 hover:opacity-100"
+         target="_blank" rel="noreferrer">View on GitHub</a>
+    </div>
+  </header>
 
   <main class="max-w-6xl mx-auto px-4 sm:px-6 pb-24 space-y-6">
-    <!-- Leaderboard -->
+    <!-- Weekly Scores Card -->
     <section class="card p-5 sm:p-7">
       <div class="flex items-center justify-between">
-        <h2 class="riddle-title text-2xl sm:text-3xl font-extrabold">Leaderboard</h2>
-        <div class="flex gap-2" role="tablist" aria-label="Leaderboard views">
-          <button class="tab-btn px-3 py-1.5 rounded-lg text-sm" data-view="total" aria-selected="true">Total</button>
-          <button class="tab-btn px-3 py-1.5 rounded-lg text-sm" data-view="last4" aria-selected="false">Last 4 Weeks</button>
-          <button class="tab-btn px-3 py-1.5 rounded-lg text-sm" data-view="week" aria-selected="false">Selected Week</button>
+        <h2 class="riddle-title text-2xl sm:text-3xl font-extrabold">Weekly Scores</h2>
+        <div class="flex gap-2 items-center">
+          <button id="totalBtn" class="tab-btn px-3 py-1.5 rounded-lg text-sm" aria-selected="true">Total</button>
           <select id="weekSelect" class="pill px-2 py-1 rounded-lg text-sm"></select>
         </div>
       </div>
       <div id="leaderboard" class="mt-5 grid-auto"></div>
-    </section>
-
-    <!-- Weekly Scores (collapsibles) -->
-    <section class="card p-5 sm:p-7">
-      <h3 class="riddle-title text-xl sm:text-2xl font-extrabold">Weekly Scores</h3>
-      <div id="weekly" class="mt-4 space-y-2"></div>
     </section>
 
     <!-- Season Highlight -->
@@ -103,37 +119,32 @@
     </section>
   </main>
 
-  <footer class="text-center text-xs opacity-80 py-8">&copy; <span id="copyrightYear"></span> NFL League Tracker</footer>
+  <footer class="text-center text-sm opacity-75 py-6">
+    <p>&copy; <span id="copyrightYear"></span> NFL League</p>
+  </footer>
 
   <script>
-    // ---- Data files (same pattern as your Riddle site) ----
-    const paths = { players:'players.json', weeks:'weeks.json', config:'config.json' };
-
-    async function loadJSON(url){
-      const res = await fetch(url + `?v=${Date.now()}`, { cache:'no-store' });
-      if(!res.ok) throw new Error(`Failed to load ${url} (${res.status})`);
-      return res.json();
+    function medal(rank){
+      if(rank===0) return {emoji:"🥇", color:"from-yellow-400 to-yellow-600", name:"Gold"};
+      if(rank===1) return {emoji:"🥈", color:"from-gray-300 to-gray-500", name:"Silver"};
+      if(rank===2) return {emoji:"🥉", color:"from-amber-600 to-amber-800", name:"Bronze"};
+      return null;
     }
 
     function compute(tables){
       const { players, weeks } = tables;
       const byId = Object.fromEntries(players.map(p=>[p.id,p]));
-
-      // collect available weeks
       const weekNums = [...new Set(weeks.map(w=>w.week))].sort((a,b)=>a-b);
 
-      // precompute per-player totals, last4 and per-week
-      const totals = players.map(p=>({ id:p.id, name:p.name, avatar:p.avatar, total:0, last4:0, perWeek:{} }));
+      const totals = players.map(p=>({ id:p.id, name:p.name, avatar:p.avatar, total:0, perWeek:{} }));
       const idx = Object.fromEntries(totals.map(t=>[t.id,t]));
 
-      const last4set = new Set(weekNums.slice(-4));
       weeks.forEach(w=>{
         const scores = w.scores || {};
         for(const [pid,pts] of Object.entries(scores)){
           const t = idx[pid]; if(!t) continue;
           const val = Number(pts)||0;
           t.total += val;
-          if(last4set.has(w.week)) t.last4 += val;
           t.perWeek[w.week] = val;
         }
       });
@@ -141,18 +152,9 @@
       return { playersById:byId, totals, weekNums };
     }
 
-    function medal(i){
-      return [
-        {name:'Leader', emoji:'🥇', color:'from-yellow-200 to-yellow-400'},
-        {name:'Second', emoji:'🥈', color:'from-gray-200 to-gray-400'},
-        {name:'Third',  emoji:'🥉', color:'from-amber-200 to-amber-400'}
-      ][i] || null;
-    }
-
     function playerCard(p, rank, view, selectedWeek){
       const m = medal(rank);
       let value = p.total, label = 'Total';
-      if(view==='last4'){ value = p.last4; label = 'Last 4'; }
       if(view==='week'){ value = p.perWeek[selectedWeek]||0; label = `Week ${selectedWeek}`; }
 
       return `
@@ -174,108 +176,12 @@
     }
 
     function renderLeaderboard(totals, view, selectedWeek){
-      const key = view==='last4' ? 'last4' : (view==='week' ? null : 'total');
       const sorted = [...totals].sort((a,b)=>{
-        if(key){ return (b[key]||0) - (a[key]||0); }
-        return (b.perWeek[selectedWeek]||0) - (a.perWeek[selectedWeek]||0);
+        if(view==='week') return (b.perWeek[selectedWeek]||0) - (a.perWeek[selectedWeek]||0);
+        return b.total - a.total;
       });
       document.getElementById('leaderboard').innerHTML =
         sorted.map((p,i)=>playerCard(p,i,view,selectedWeek)).join('');
-    }
-
-    function renderWeekly(weekNums, totals){
-      const wrap = document.getElementById('weekly');
-      wrap.innerHTML = weekNums.map(week=>{
-        const rows = totals
-          .map(p=>({ name:p.name, avatar:p.avatar, score:p.perWeek[week]||0 }))
-          .sort((a,b)=>b.score-a.score)
-          .map(r=>`
-            <tr>
-              <td class="p-2 border border-[var(--line)]">
-                <div class="flex items-center gap-2"><img src="${r.avatar}" class="avatar">${r.name}</div>
-              </td>
-              <td class="p-2 border border-[var(--line)] text-right font-bold">${r.score}</td>
-            </tr>`).join('');
-        return `
-          <button class="collapse w-full pill px-4 py-2 rounded-lg" data-week="${week}">Week ${week}</button>
-          <div class="collapse-body">
-            <div class="overflow-x-auto mt-2">
-              <table class="table w-full text-sm">
-                <thead>
-                  <tr>
-                    <th class="p-2 border border-[var(--line)] text-left">Player</th>
-                    <th class="p-2 border border-[var(--line)] text-right">Score</th>
-                  </tr>
-                </thead>
-                <tbody>${rows || ''}</tbody>
-              </table>
-            </div>
-          </div>`;
-      }).join('');
-
-      // Simple collapse behaviour
-      wrap.querySelectorAll('.collapse').forEach(btn=>{
-        btn.addEventListener('click', ()=>{
-          btn.classList.toggle('open');
-          const body = btn.nextElementSibling;
-          body.style.display = body.style.display==='block' ? 'none' : 'block';
-        });
-      });
-    }
-
-    function renderHighlight(cfg, playersById){
-      const el = document.getElementById('highlight');
-      const w = playersById[cfg.highlight?.winner] || null;
-      const s = playersById[cfg.highlight?.spoon] || null;
-      el.innerHTML = `
-        <div class="text-center">
-          <h4 class="font-bold text-lg mb-2">${cfg.season} Season Winner!</h4>
-          ${w ? `<div class=\"mx-auto w-24 h-24 rounded-full overflow-hidden border-4 border-[var(--line)] mb-2\"><img src=\"${w.avatar}\" alt=\"${w.name}\" class=\"w-full h-full object-cover\"></div><div class=\"font-extrabold\">${w.name}</div>` : '<div class="opacity-60">TBD</div>'}
-        </div>
-        <div class="text-center">
-          <h4 class="font-bold text-lg mb-2">🥄 Wooden Spoon</h4>
-          ${s ? `<div class=\"mx-auto w-24 h-24 rounded-full overflow-hidden border-4 border-red-500 mb-2\"><img src=\"${s.avatar}\" alt=\"${s.name}\" class=\"w-full h-full object-cover\"></div><div class=\"font-extrabold\">${s.name}</div>` : '<div class="opacity-60">TBD</div>'}
-        </div>`;
-    }
-
-    function renderHonorary(cfg, playersById){
-      const el = document.getElementById('honorary');
-      const items = (cfg.honorary||[]).sort((a,b)=>b.year-a.year).map(h=>{
-        const p = playersById[h.player] || { name:h.player, avatar:'Assets/football2.jpg' };
-        return `
-          <div class="text-center">
-            <div class="mx-auto w-20 h-20 rounded-full overflow-hidden border-2 border-[var(--line)] mb-2">
-              <img src="${p.avatar}" alt="${p.name}" class="w-full h-full object-cover">
-            </div>
-            <div class="text-sm font-semibold">${h.year} — ${p.name}</div>
-          </div>`;
-      }).join('');
-      el.innerHTML = items;
-    }
-
-    function setupTabs(state){
-      const tabs = document.querySelectorAll('.tab-btn');
-      const weekSel = document.getElementById('weekSelect');
-      tabs.forEach(btn=>{
-        btn.addEventListener('click', ()=>{
-          tabs.forEach(x=>x.setAttribute('aria-selected','false'));
-          btn.setAttribute('aria-selected','true');
-          const view = btn.dataset.view;
-          renderLeaderboard(state.totals, view, Number(weekSel.value));
-        });
-      });
-      weekSel.addEventListener('change', ()=>{
-        const selected = document.querySelector('.tab-btn[aria-selected="true"]');
-        const view = selected ? selected.dataset.view : 'total';
-        renderLeaderboard(state.totals, view, Number(weekSel.value));
-      });
-    }
-
-    function setupSeasons(cfg){
-      const sel = document.getElementById('seasonSelect');
-      const seasons = (cfg.allSeasons||[]);
-      sel.innerHTML = [cfg.season, ...seasons.filter(s=>s!==cfg.season)].map(s=>`<option value="${s}">${s}</option>`).join('');
-      return sel;
     }
 
     (async function boot(){
@@ -286,34 +192,34 @@
           loadJSON(paths.config).catch(()=>({}))
         ]);
 
-        // apply repo link
-        const repoLink = document.getElementById('repoLink');
-        if(repoLink) repoLink.href = config.repoUrl || '#';
-
-        // footer year
-        document.getElementById('copyrightYear').textContent = new Date().getFullYear();
-
-        // populate season + weeks select
         const state = compute({ players, weeks });
         const weekSel = document.getElementById('weekSelect');
         weekSel.innerHTML = state.weekNums.map(w=>`<option value="${w}">Week ${w}</option>`).join('');
         if(state.weekNums.length) weekSel.value = String(state.weekNums[state.weekNums.length-1]);
 
-        // render all UI
-        renderLeaderboard(state.totals, 'total', Number(weekSel.value));
-        renderWeekly(state.weekNums, state.totals);
+        // initial render → Total
+        renderLeaderboard(state.totals, 'total');
+
+        // hook up total button
+        document.getElementById('totalBtn').addEventListener('click', ()=>{
+          renderLeaderboard(state.totals, 'total');
+        });
+
+        // hook up week select
+        weekSel.addEventListener('change', ()=>{
+          renderLeaderboard(state.totals, 'week', Number(weekSel.value));
+        });
+
+        // other renderers
         renderHighlight(config, state.playersById);
         renderHonorary(config, state.playersById);
-
-        // wire tabs
-        setupTabs(state);
         setupSeasons(config);
+
+        // footer year
+        document.getElementById('copyrightYear').textContent = new Date().getFullYear();
+
       }catch(err){
         console.error(err);
-        const msg = document.createElement('div');
-        msg.className = 'fixed bottom-4 left-1/2 -translate-x-1/2 bg-red-600 text-white px-4 py-2 rounded-xl text-sm shadow-lg';
-        msg.textContent = err.message;
-        document.body.appendChild(msg);
       }
     })();
   </script>
