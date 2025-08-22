@@ -38,6 +38,33 @@
       .tab-btn, .pill{ font-size:1rem; padding:.5rem 1rem }
     }
 
+    /* Honorary Winners layout helpers */
+.honorary-list{
+  display:grid;
+  grid-template-columns: 1fr;         /* phones = 1 col */
+  gap: 1.25rem;                        /* 20px */
+  place-items: center;
+}
+.honorary-item{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+}
+.honorary-avatar{
+  width: 96px; height: 96px;           /* 24 * 4px = 96px (≈ w-24 h-24) */
+  border-radius: 9999px;
+  overflow:hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,.5);
+  outline: 4px solid #f59e0b;          /* amber ring */
+}
+@media (min-width: 640px){             /* sm and up = 2 cols */
+  .honorary-list{ grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1024px){            /* lg and up = 4 cols */
+  .honorary-list{ grid-template-columns: repeat(4, 1fr); }
+}
+
     /* Modal styles */
     .modal-backdrop { position:fixed; inset:0; background:rgba(0,0,0,.55); display:none; z-index:50; }
     .modal-backdrop.open { display:flex; align-items:center; justify-content:center; }
@@ -151,8 +178,6 @@
       }
     </div>
   `;
-}
-
 function renderHonorary(cfg, playersById){
   const el = document.getElementById('honorary');
   if(!el) return;
@@ -163,26 +188,19 @@ function renderHonorary(cfg, playersById){
     .map(h=>{
       const p = playersById[h.player] || { name:h.player, avatar:'Assets/football2.jpg' };
       return `
-        <div class="flex flex-col items-center text-center">
-          <div class="rounded-full overflow-hidden ring-4 ring-amber-400 shadow
-                      w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28">
-            <img src="${p.avatar}" alt="${p.name}" class="w-full h-full object-cover">
+        <li class="honorary-item">
+          <div class="honorary-avatar">
+            <img src="${p.avatar}" alt="${p.name}" style="width:100%;height:100%;object-fit:cover">
           </div>
-          <div class="mt-2 font-semibold text-sm sm:text-base whitespace-nowrap">
-            ${h.year} - ${p.name}
-          </div>
-        </div>`;
+          <div class="mt-2 font-semibold">${h.year} - ${p.name}</div>
+        </li>`;
     }).join('');
 
   el.innerHTML = items
-    ? `<div class="grid gap-6 sm:gap-8
-                    grid-cols-1 sm:grid-cols-2 md:grid-cols-4
-                    place-items-center">
-         ${items}
-       </div>`
+    ? `<ul class="honorary-list">${items}</ul>`
     : '<div class="opacity-60 text-center">No honorary winners yet.</div>';
 }
-    
+
     function medal(rank){
       if(rank===0) return {emoji:"🥇", color:"from-yellow-400 to-yellow-600", name:"Gold"};
       if(rank===1) return {emoji:"🥈", color:"from-gray-300 to-gray-500", name:"Silver"};
