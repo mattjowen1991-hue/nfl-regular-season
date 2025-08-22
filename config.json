@@ -10,5 +10,10 @@
     { "year": 2023, "player": "gaz" },
     { "year": 2022, "player": "ste" },
     { "year": 2021, "player": "jarv" }
-  ]
+  ],
+  "perfectWeekPoints": {
+    "1": 14,
+    "2": 13,
+    "3": 12
+  }
 }
