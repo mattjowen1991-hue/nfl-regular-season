@@ -114,11 +114,12 @@
       <div id="highlight" class="mt-4 grid sm:grid-cols-2 gap-6"></div>
     </section>
 
-    <!-- Honorary Winners -->
-    <section class="card p-5 sm:p-7">
-      <h3 class="riddle-title text-xl sm:text-2xl font-extrabold">Honorary Winners</h3>
-      <div id="honorary" class="mt-4 grid grid-cols-2 sm:grid-cols-4 gap-6"></div>
-    </section>
+   <!-- Honorary Winners -->
+<section class="card p-5 sm:p-7">
+  <h3 class="riddle-title text-xl sm:text-2xl font-extrabold">Honorary Winners</h3>
+  <!-- Tailwind grid handles layout -->
+  <ul id="honorary" class="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"></ul>
+</section>
   </main>
 
   <footer class="text-center text-sm opacity-75 py-6">
@@ -188,17 +189,15 @@ function renderHonorary(cfg, playersById){
     .map(h=>{
       const p = playersById[h.player] || { name:h.player, avatar:'Assets/football2.jpg' };
       return `
-        <li class="honorary-item">
-          <div class="honorary-avatar">
-            <img src="${p.avatar}" alt="${p.name}" style="width:100%;height:100%;object-fit:cover">
+        <li class="flex flex-col items-center text-center">
+          <div class="w-24 h-24 rounded-full overflow-hidden ring-4 ring-amber-400 shadow-lg">
+            <img src="${p.avatar}" alt="${p.name}" class="w-full h-full object-cover">
           </div>
           <div class="mt-2 font-semibold">${h.year} - ${p.name}</div>
         </li>`;
     }).join('');
 
-  el.innerHTML = items
-    ? `<ul class="honorary-list">${items}</ul>`
-    : '<div class="opacity-60 text-center">No honorary winners yet.</div>';
+  el.innerHTML = items || '<div class="opacity-60 text-center">No honorary winners yet.</div>';
 }
 
     function medal(rank){
