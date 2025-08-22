@@ -5,9 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NFL League Scores</title>
 
-  <!-- Tailwind utilities used across the markup -->
+  <!-- Tailwind utilities -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Optional heading font (matches your style) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&display=swap" rel="stylesheet">
@@ -30,7 +29,6 @@
     .pill{ border-radius:.75rem; }
     .avatar{ width:48px; height:48px; border-radius:50%; object-fit:cover; }
     .grid-auto{ display:grid; grid-template-columns: repeat(auto-fill, minmax(200px,1fr)); gap:1rem; }
-    .ring-theme{ box-shadow:0 0 0 3px rgba(37,99,235,.35); }
 
     @media (max-width: 640px){
       header .riddle-title{ font-size:1.5rem }
@@ -38,38 +36,9 @@
       .tab-btn, .pill{ font-size:1rem; padding:.5rem 1rem }
     }
 
-    /* Honorary Winners layout helpers */
-.honorary-list{
-  display:grid;
-  grid-template-columns: 1fr;         /* phones = 1 col */
-  gap: 1.25rem;                        /* 20px */
-  place-items: center;
-}
-.honorary-item{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  text-align:center;
-}
-.honorary-avatar{
-  width: 96px; height: 96px;           /* 24 * 4px = 96px (≈ w-24 h-24) */
-  border-radius: 9999px;
-  overflow:hidden;
-  box-shadow: 0 2px 10px rgba(0,0,0,.5);
-  outline: 4px solid #f59e0b;          /* amber ring */
-}
-@media (min-width: 640px){             /* sm and up = 2 cols */
-  .honorary-list{ grid-template-columns: repeat(2, 1fr); }
-}
-@media (min-width: 1024px){            /* lg and up = 4 cols */
-  .honorary-list{ grid-template-columns: repeat(4, 1fr); }
-}
-
     /* Modal styles */
     .modal-backdrop { position:fixed; inset:0; background:rgba(0,0,0,.55); display:none; z-index:50; }
     .modal-backdrop.open { display:flex; align-items:center; justify-content:center; }
-
-    /* Solid rules modal */
     .modal-backdrop .card {
       background:#111; border:1px solid var(--line); border-radius:1rem;
       max-width:600px; padding:1.5rem; margin:1rem; box-shadow:0 8px 20px rgba(0,0,0,.6);
@@ -96,7 +65,7 @@
   </header>
 
   <main class="max-w-6xl mx-auto px-4 sm:px-6 pb-24 space-y-6">
-    <!-- Weekly Scores Card -->
+    <!-- Weekly Scores -->
     <section class="card p-5 sm:p-7">
       <div class="flex items-center justify-between">
         <h2 class="riddle-title text-2xl sm:text-3xl font-extrabold">Weekly Scores</h2>
@@ -114,12 +83,11 @@
       <div id="highlight" class="mt-4 grid sm:grid-cols-2 gap-6"></div>
     </section>
 
-   <!-- Honorary Winners -->
-<section class="card p-5 sm:p-7">
-  <h3 class="riddle-title text-xl sm:text-2xl font-extrabold">Honorary Winners</h3>
-  <!-- Tailwind grid handles layout -->
-  <ul id="honorary" class="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"></ul>
-</section>
+    <!-- Honorary Winners -->
+    <section class="card p-5 sm:p-7">
+      <h3 class="riddle-title text-xl sm:text-2xl font-extrabold">Honorary Winners</h3>
+      <ul id="honorary" class="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"></ul>
+    </section>
   </main>
 
   <footer class="text-center text-sm opacity-75 py-6">
@@ -145,60 +113,58 @@
 
   <script>
     function renderHighlight(cfg, playersById){
-  const el = document.getElementById('highlight');
-  if(!el) return;
+      const el = document.getElementById('highlight');
+      if(!el) return;
 
-  const wId = cfg?.highlight?.winner;
-  const sId = cfg?.highlight?.spoon;
-  const w = wId && playersById[wId];
-  const s = sId && playersById[sId];
+      const wId = cfg?.highlight?.winner;
+      const sId = cfg?.highlight?.spoon;
+      const w = wId && playersById[wId];
+      const s = sId && playersById[sId];
 
-  el.innerHTML = `
-    <div class="text-center space-y-2">
-      <h4 class="font-extrabold text-amber-400 text-xl sm:text-2xl">
-        ${cfg?.season ? `${cfg.season} Season Winner!` : 'Season Winner!'}
-      </h4>
-      ${
-        w
-          ? `<div class="mx-auto w-28 h-28 rounded-full overflow-hidden ring-4 ring-amber-400 shadow-lg">
-               <img src="${w.avatar}" alt="${w.name}" class="w-full h-full object-cover">
-             </div>
-             <div class="font-extrabold text-lg">${w.name}</div>`
-          : `<div class="opacity-60">TBD</div>`
-      }
-    </div>
-    <div class="text-center space-y-2">
-      <h4 class="font-extrabold text-xl sm:text-2xl">🥄 Current Wooden Spoon Holder!</h4>
-      ${
-        s
-          ? `<div class="mx-auto w-28 h-28 rounded-full overflow-hidden ring-4 ring-red-400 shadow-lg">
-               <img src="${s.avatar}" alt="${s.name}" class="w-full h-full object-cover">
-             </div>
-             <div class="font-extrabold text-lg">${s.name}</div>`
-          : `<div class="opacity-60">TBD</div>`
-      }
-    </div>
-  `;
-function renderHonorary(cfg, playersById){
-  const el = document.getElementById('honorary');
-  if(!el) return;
+      el.innerHTML = `
+        <div class="text-center space-y-2">
+          <h4 class="font-extrabold text-amber-400 text-xl sm:text-2xl">
+            ${cfg?.season ? `${cfg.season} Season Winner!` : 'Season Winner!'}
+          </h4>
+          ${ w
+            ? `<div class="mx-auto w-28 h-28 rounded-full overflow-hidden ring-4 ring-amber-400 shadow-lg">
+                 <img src="${w.avatar}" alt="${w.name}" class="w-full h-full object-cover">
+               </div>
+               <div class="font-extrabold text-lg">${w.name}</div>`
+            : `<div class="opacity-60">TBD</div>` }
+        </div>
+        <div class="text-center space-y-2">
+          <h4 class="font-extrabold text-xl sm:text-2xl">🥄 Current Wooden Spoon Holder!</h4>
+          ${ s
+            ? `<div class="mx-auto w-28 h-28 rounded-full overflow-hidden ring-4 ring-red-400 shadow-lg">
+                 <img src="${s.avatar}" alt="${s.name}" class="w-full h-full object-cover">
+               </div>
+               <div class="font-extrabold text-lg">${s.name}</div>`
+            : `<div class="opacity-60">TBD</div>` }
+        </div>
+      `;
+    }
 
-  const items = (cfg?.honorary || [])
-    .slice()
-    .sort((a,b)=> b.year - a.year) // newest first
-    .map(h=>{
-      const p = playersById[h.player] || { name:h.player, avatar:'Assets/football2.jpg' };
-      return `
-        <li class="flex flex-col items-center text-center">
-          <div class="w-24 h-24 rounded-full overflow-hidden ring-4 ring-amber-400 shadow-lg">
-            <img src="${p.avatar}" alt="${p.name}" class="w-full h-full object-cover">
-          </div>
-          <div class="mt-2 font-semibold">${h.year} - ${p.name}</div>
-        </li>`;
-    }).join('');
+    function renderHonorary(cfg, playersById){
+      const el = document.getElementById('honorary');
+      if(!el) return;
 
-  el.innerHTML = items || '<div class="opacity-60 text-center">No honorary winners yet.</div>';
-}
+      const items = (cfg?.honorary || [])
+        .slice()
+        .sort((a,b)=> b.year - a.year)
+        .map(h=>{
+          const p = playersById[h.player] || { name:h.player, avatar:'Assets/football2.jpg' };
+          return `
+            <li class="flex flex-col items-center text-center">
+              <div class="w-24 h-24 rounded-full overflow-hidden ring-4 ring-amber-400 shadow-lg">
+                <img src="${p.avatar}" alt="${p.name}" class="w-full h-full object-cover">
+              </div>
+              <div class="mt-2 font-semibold">${h.year} - ${p.name}</div>
+            </li>`;
+        }).join('');
+
+      el.innerHTML = items || '<div class="opacity-60 text-center">No honorary winners yet.</div>';
+    }
 
     function medal(rank){
       if(rank===0) return {emoji:"🥇", color:"from-yellow-400 to-yellow-600", name:"Gold"};
@@ -281,8 +247,7 @@ function renderHonorary(cfg, playersById){
         weekSel.innerHTML = state.weekNums.map(w=>`<option value="${w}">Week ${w}</option>`).join('');
         if(state.weekNums.length) weekSel.value = String(state.weekNums[state.weekNums.length-1]);
 
-        renderLeaderboard(state.totals, 'total'); // Total first
-
+        renderLeaderboard(state.totals, 'total');
         renderHighlight(config, state.playersById);
         renderHonorary(config, state.playersById);
 
@@ -295,17 +260,14 @@ function renderHonorary(cfg, playersById){
           renderLeaderboard(state.totals, 'week', Number(weekSel.value));
         });
 
-        // Repo link if provided
         const repoLink = document.getElementById('repoLink');
         if(repoLink) repoLink.href = config.repoUrl || '#';
 
-        // Rules modal
         const modal = document.getElementById('rulesModal');
         document.getElementById('rulesBtn').addEventListener('click', ()=> modal.classList.add('open'));
         document.getElementById('closeRules').addEventListener('click', ()=> modal.classList.remove('open'));
         modal.addEventListener('click', e=>{ if(e.target===modal) modal.classList.remove('open'); });
 
-        // Footer year
         document.getElementById('copyrightYear').textContent = new Date().getFullYear();
       }catch(err){
         console.error(err);
