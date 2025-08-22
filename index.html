@@ -163,22 +163,25 @@ function renderHonorary(cfg, playersById){
     .map(h=>{
       const p = playersById[h.player] || { name:h.player, avatar:'Assets/football2.jpg' };
       return `
-        <div class="flex flex-col items-center gap-2">
-          <div class="w-24 h-24 rounded-full overflow-hidden ring-4 ring-amber-400 shadow">
+        <div class="flex flex-col items-center text-center">
+          <div class="rounded-full overflow-hidden ring-4 ring-amber-400 shadow
+                      w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28">
             <img src="${p.avatar}" alt="${p.name}" class="w-full h-full object-cover">
           </div>
-          <div class="text-base font-bold">${h.year} - ${p.name}</div>
+          <div class="mt-2 font-semibold text-sm sm:text-base whitespace-nowrap">
+            ${h.year} - ${p.name}
+          </div>
         </div>`;
     }).join('');
 
   el.innerHTML = items
-    ? `
-      <div class="flex flex-col sm:flex-row sm:flex-wrap gap-6 justify-center">
-        ${items}
-      </div>`
+    ? `<div class="grid gap-6 sm:gap-8
+                    grid-cols-1 sm:grid-cols-2 md:grid-cols-4
+                    place-items-center">
+         ${items}
+       </div>`
     : '<div class="opacity-60 text-center">No honorary winners yet.</div>';
 }
-
     
     function medal(rank){
       if(rank===0) return {emoji:"🥇", color:"from-yellow-400 to-yellow-600", name:"Gold"};
