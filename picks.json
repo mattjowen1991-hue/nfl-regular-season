@@ -16,7 +16,8 @@
           "lee": "Miami Dolphins",
           "tony": "Miami Dolphins",
           "matt": "Indianapolis Colts",
-          "liam": "Miami Dolphins"
+          "liam": "Miami Dolphins",
+          "jay": "Miami Dolphins"
         }
       },
       {
@@ -33,7 +34,8 @@
           "lee": "Pittsburgh Steelers",
           "tony": "New York Jets",
           "matt": "Pittsburgh Steelers",
-          "liam": "Pittsburgh Steelers"
+          "liam": "Pittsburgh Steelers",
+          "jay": "New York Jets"
         }
       },
       {
@@ -50,7 +52,8 @@
           "lee": "Carolina Panthers",
           "tony": "Jacksonville Jaguars",
           "matt": "Jacksonville Jaguars",
-          "liam": "Jacksonville Jaguars"
+          "liam": "Jacksonville Jaguars",
+          "jay": "Jacksonville Jaguars"
         }
       },
       {
@@ -67,7 +70,8 @@
           "lee": "Arizona Cardinals",
           "tony": "Arizona Cardinals",
           "matt": "Arizona Cardinals",
-          "liam": "Arizona Cardinals"
+          "liam": "Arizona Cardinals",
+          "jay": "Arizona Cardinals"
         }
       },
       {
@@ -84,7 +88,8 @@
           "lee": "Washington Commanders",
           "tony": "New York Giants",
           "matt": "Washington Commanders",
-          "liam": "Washington Commanders"
+          "liam": "Washington Commanders",
+          "jay": "Washington Commanders"
         }
       },
       {
@@ -101,7 +106,8 @@
           "lee": "Tampa Bay Buccaneers",
           "tony": "Atlanta Falcons",
           "matt": "Atlanta Falcons",
-          "liam": "Tampa Bay Buccaneers"
+          "liam": "Tampa Bay Buccaneers",
+          "jay": "Atlanta Falcons"
         }
       },
       {
@@ -118,7 +124,8 @@
           "lee": "Cincinnati Bengals",
           "tony": "Cincinnati Bengals",
           "matt": "Cincinnati Bengals",
-          "liam": "Cincinnati Bengals"
+          "liam": "Cincinnati Bengals",
+          "jay": "Cincinnati Bengals"
         }
       },
       {
@@ -135,7 +142,8 @@
           "lee": "New England Patriots",
           "tony": "Las Vegas Raiders",
           "matt": "New England Patriots",
-          "liam": "New England Patriots"
+          "liam": "New England Patriots",
+          "jay": "Las Vegas Raiders"
         }
       }
     ]
@@ -157,7 +165,8 @@
           "lee": "TBC",
           "tony": "TBC",
           "matt": "TBC",
-          "liam": "TBC"
+          "liam": "TBC",
+          "jay": "TBC"
         }
       },
       {
@@ -174,7 +183,8 @@
           "lee": "TBC",
           "tony": "TBC",
           "matt": "TBC",
-          "liam": "TBC"
+          "liam": "TBC",
+          "jay": "TBC"
         }
       },
       {
@@ -191,7 +201,8 @@
           "lee": "TBC",
           "tony": "TBC",
           "matt": "TBC",
-          "liam": "TBC"
+          "liam": "TBC",
+          "jay": "TBC"
         }
       }
     ]
