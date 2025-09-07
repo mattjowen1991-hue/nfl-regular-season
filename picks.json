@@ -5,7 +5,7 @@
     {
       "home": "Indianapolis Colts",
       "away": "Miami Dolphins",
-      "winner": "TBC",
+      "winner": "Indianapolis Colts",
       "picks": {
         "matt": "Indianapolis Colts",
         "jarv": "Miami Dolphins",
@@ -24,7 +24,7 @@
     {
       "home": "New York Jets",
       "away": "Pittsburgh Steelers",
-      "winner": "TBC",
+      "winner": "Pittsburgh Steelers",
       "picks": {
         "matt": "Pittsburgh Steelers",
         "jarv": "Pittsburgh Steelers",
@@ -43,7 +43,7 @@
     {
       "home": "Jacksonville Jaguars",
       "away": "Carolina Panthers",
-      "winner": "TBC",
+      "winner": "Jacksonville Jaguars",
       "picks": {
         "matt": "Jacksonville Jaguars",
         "jarv": "Jacksonville Jaguars",
@@ -62,7 +62,7 @@
     {
       "home": "New Orleans Saints",
       "away": "Arizona Cardinals",
-      "winner": "TBC",
+      "winner": "Arizona Cardinals",
       "picks": {
         "matt": "Arizona Cardinals",
         "jarv": "Arizona Cardinals",
@@ -81,7 +81,7 @@
     {
       "home": "Washington Redskins",
       "away": "New York Giants",
-      "winner": "TBC",
+      "winner": "Washington Redskins",
       "picks": {
         "matt": "Washington Redskins",
         "jarv": "Washington Redskins",
@@ -100,7 +100,7 @@
     {
       "home": "Atlanta Falcons",
       "away": "Tampa Bay Buccaneers",
-      "winner": "TBC",
+      "winner": "Tampa Bay Buccaneers",
       "picks": {
         "matt": "Atlanta Falcons",
         "jarv": "Tampa Bay Buccaneers",
@@ -119,7 +119,7 @@
     {
       "home": "Cleveland Browns",
       "away": "Cincinnati Bengals",
-      "winner": "TBC",
+      "winner": "Cincinnati Bengals",
       "picks": {
         "matt": "Cincinnati Bengals",
         "jarv": "Cincinnati Bengals",
@@ -138,7 +138,7 @@
     {
       "home": "New England Patriots",
       "away": "Las Vegas Raiders",
-      "winner": "TBC",
+      "winner": "Las Vegas Raiders",
       "picks": {
         "matt": "New England Patriots",
         "jarv": "Las Vegas Raiders",
