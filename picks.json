@@ -17,7 +17,8 @@
           "tony": "Miami Dolphins",
           "matt": "Indianapolis Colts",
           "liam": "Miami Dolphins",
-          "jay": "Miami Dolphins"
+          "jay": "Miami Dolphins",
+          "jarv": "Miami Dolphins"
         }
       },
       {
@@ -35,7 +36,8 @@
           "tony": "New York Jets",
           "matt": "Pittsburgh Steelers",
           "liam": "Pittsburgh Steelers",
-          "jay": "New York Jets"
+          "jay": "New York Jets",
+          "jarv": "Pittsburgh Steelers"
         }
       },
       {
@@ -53,7 +55,8 @@
           "tony": "Jacksonville Jaguars",
           "matt": "Jacksonville Jaguars",
           "liam": "Jacksonville Jaguars",
-          "jay": "Jacksonville Jaguars"
+          "jay": "Jacksonville Jaguars",
+          "jarv": "Jacksonville Jaguars"
         }
       },
       {
@@ -71,25 +74,27 @@
           "tony": "Arizona Cardinals",
           "matt": "Arizona Cardinals",
           "liam": "Arizona Cardinals",
-          "jay": "Arizona Cardinals"
+          "jay": "Arizona Cardinals",
+          "jarv": "Arizona Cardinals"
         }
       },
       {
-        "home": "Washington Commanders",
+        "home": "Washington Redskins",
         "away": "New York Giants",
         "winner": "TBC",
         "picks": {
-          "joe": "Washington Commanders",
-          "mark": "Washington Commanders",
-          "coley": "Washington Commanders",
-          "ste": "Las Vegas Raiders",
-          "ben": "Washington Commanders",
+          "joe": "Washington Redskins",
+          "mark": "Washington Redskins",
+          "coley": "Washington Redskins",
+          "ste": "Washington Redskins",
+          "ben": "Washington Redskins",
           "gaz": "New York Giants",
-          "lee": "Washington Commanders",
+          "lee": "Washington Redskins",
           "tony": "New York Giants",
-          "matt": "Washington Commanders",
-          "liam": "Washington Commanders",
-          "jay": "Washington Commanders"
+          "matt": "Washington Redskins",
+          "liam": "Washington Redskins",
+          "jay": "Washington Redskins",
+          "jarv": "Washington Redskins"
         }
       },
       {
@@ -107,7 +112,8 @@
           "tony": "Atlanta Falcons",
           "matt": "Atlanta Falcons",
           "liam": "Tampa Bay Buccaneers",
-          "jay": "Atlanta Falcons"
+          "jay": "Atlanta Falcons",
+          "jarv": "Tampa Bay Buccaneers"
         }
       },
       {
@@ -125,7 +131,8 @@
           "tony": "Cincinnati Bengals",
           "matt": "Cincinnati Bengals",
           "liam": "Cincinnati Bengals",
-          "jay": "Cincinnati Bengals"
+          "jay": "Cincinnati Bengals",
+          "jarv": "Cincinnati Bengals"
         }
       },
       {
@@ -143,7 +150,8 @@
           "tony": "Las Vegas Raiders",
           "matt": "New England Patriots",
           "liam": "New England Patriots",
-          "jay": "Las Vegas Raiders"
+          "jay": "Las Vegas Raiders",
+          "jarv": "Las Vegas Raiders"
         }
       }
     ]
@@ -166,7 +174,8 @@
           "tony": "TBC",
           "matt": "TBC",
           "liam": "TBC",
-          "jay": "TBC"
+          "jay": "TBC",
+          "jarv": "TBC"
         }
       },
       {
@@ -184,7 +193,8 @@
           "tony": "TBC",
           "matt": "TBC",
           "liam": "TBC",
-          "jay": "TBC"
+          "jay": "TBC",
+          "jarv": "TBC"
         }
       },
       {
@@ -202,7 +212,8 @@
           "tony": "TBC",
           "matt": "TBC",
           "liam": "TBC",
-          "jay": "TBC"
+          "jay": "TBC",
+          "jarv": "TBC"
         }
       }
     ]
