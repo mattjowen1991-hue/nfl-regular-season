@@ -156,4 +156,81 @@
     }
   ]
 },
-{ "week": 2, "games": [ { "home": "Las Vegas Raiders", "away": "Seattle Seahawks", "winner": "TBC", "picks": { "joe": "TBC", "mark": "TBC", "coley": "TBC", "ste": "TBC", "ben": "TBC", "gaz": "TBC", "lee": "TBC", "tony": "TBC", "matt": "TBC", "liam": "TBC", "jay": "TBC", "jarv": "TBC" } }, { "home": "Philadelphia Eagles", "away": "Washington Redskins", "winner": "TBC", "picks": { "joe": "TBC", "mark": "TBC", "coley": "TBC", "ste": "TBC", "ben": "TBC", "gaz": "TBC", "lee": "TBC", "tony": "TBC", "matt": "TBC", "liam": "TBC", "jay": "TBC", "jarv": "TBC" } }, { "home": "Kansas City Chiefs", "away": "San Francisco 49ers", "winner": "TBC", "picks": { "joe": "TBC", "mark": "TBC", "coley": "TBC", "ste": "TBC", "ben": "TBC", "gaz": "TBC", "lee": "TBC", "tony": "TBC", "matt": "TBC", "liam": "TBC", "jay": "TBC", "jarv": "TBC" } } ] } ]
+{
+  "week": 2,
+  "games": [
+    {
+      "home": "Dallas Cowboys",
+      "away": "New York Giants",
+      "winner": "TBC",
+      "picks": {
+        "jay": "Dallas Cowboys"
+      }
+    },
+    {
+      "home": "Pittsburgh Steelers",
+      "away": "Seattle Seahawks",
+      "winner": "TBC",
+      "picks": {
+        "jay": "Seattle Seahawks"
+      }
+    },
+    {
+      "home": "Tennessee Titans",
+      "away": "Los Angeles Rams",
+      "winner": "TBC",
+      "picks": {
+        "jay": "Los Angeles Rams"
+      }
+    },
+    {
+      "home": "New York Jets",
+      "away": "Buffalo Bills",
+      "winner": "TBC",
+      "picks": {
+        "jay": "Buffalo Bills"
+      }
+    },
+    {
+      "home": "Miami Dolphins",
+      "away": "New England Patriots",
+      "winner": "TBC",
+      "picks": {
+        "jay": "New England Patriots"
+      }
+    },
+    {
+      "home": "Cincinnati Bengals",
+      "away": "Jacksonville Jaguars",
+      "winner": "TBC",
+      "picks": {
+        "jay": "Jacksonville Jaguars"
+      }
+    },
+    {
+      "home": "New Orleans Saints",
+      "away": "San Francisco 49ers",
+      "winner": "TBC",
+      "picks": {
+        "jay": "San Francisco 49ers"
+      }
+    },
+    {
+      "home": "Baltimore Ravens",
+      "away": "Cleveland Browns",
+      "winner": "TBC",
+      "picks": {
+        "jay": "Baltimore Ravens"
+      }
+    },
+    {
+      "home": "Detroit Lions",
+      "away": "Chicago Bears",
+      "winner": "TBC",
+      "picks": {
+        "jay": "Chicago Bears"
+      }
+    }
+  ]
+}
+]
