@@ -164,7 +164,8 @@
       "away": "New York Giants",
       "winner": "TBC",
       "picks": {
-        "jay": "Dallas Cowboys"
+        "jay": "Dallas Cowboys",
+        "matt": "Dallas Cowboys"
       }
     },
     {
@@ -172,7 +173,8 @@
       "away": "Seattle Seahawks",
       "winner": "TBC",
       "picks": {
-        "jay": "Seattle Seahawks"
+        "jay": "Seattle Seahawks",
+        "matt": "Pittsburgh Steelers"
       }
     },
     {
@@ -180,7 +182,8 @@
       "away": "Los Angeles Rams",
       "winner": "TBC",
       "picks": {
-        "jay": "Los Angeles Rams"
+        "jay": "Los Angeles Rams",
+        "matt": "Los Angeles Rams"
       }
     },
     {
@@ -188,7 +191,8 @@
       "away": "Buffalo Bills",
       "winner": "TBC",
       "picks": {
-        "jay": "Buffalo Bills"
+        "jay": "Buffalo Bills",
+        "matt": "Buffalo Bills"
       }
     },
     {
@@ -196,7 +200,8 @@
       "away": "New England Patriots",
       "winner": "TBC",
       "picks": {
-        "jay": "New England Patriots"
+        "jay": "New England Patriots",
+        "matt": "Miami Dolphins"
       }
     },
     {
@@ -204,7 +209,8 @@
       "away": "Jacksonville Jaguars",
       "winner": "TBC",
       "picks": {
-        "jay": "Jacksonville Jaguars"
+        "jay": "Jacksonville Jaguars",
+        "matt": "Cincinnati Bengals"
       }
     },
     {
@@ -212,7 +218,8 @@
       "away": "San Francisco 49ers",
       "winner": "TBC",
       "picks": {
-        "jay": "San Francisco 49ers"
+        "jay": "San Francisco 49ers",
+        "matt": "San Francisco 49ers"
       }
     },
     {
@@ -220,7 +227,8 @@
       "away": "Cleveland Browns",
       "winner": "TBC",
       "picks": {
-        "jay": "Baltimore Ravens"
+        "jay": "Baltimore Ravens",
+        "matt": "Baltimore Ravens"
       }
     },
     {
@@ -228,7 +236,8 @@
       "away": "Chicago Bears",
       "winner": "TBC",
       "picks": {
-        "jay": "Chicago Bears"
+        "jay": "Chicago Bears",
+        "matt": "Detroit Lions"
       }
     }
   ]
