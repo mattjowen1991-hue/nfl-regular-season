@@ -162,7 +162,7 @@
     {
       "home": "Dallas Cowboys",
       "away": "New York Giants",
-      "winner": "TBC",
+      "winner": "Dallas Cowboys",
       "picks": {
         "jay": "Dallas Cowboys",
         "matt": "Dallas Cowboys",
@@ -181,7 +181,7 @@
     {
       "home": "Pittsburgh Steelers",
       "away": "Seattle Seahawks",
-      "winner": "TBC",
+      "winner": "Seattle Seahawks",
       "picks": {
         "jay": "Seattle Seahawks",
         "matt": "Pittsburgh Steelers",
@@ -200,7 +200,7 @@
     {
       "home": "Tennessee Titans",
       "away": "Los Angeles Rams",
-      "winner": "TBC",
+      "winner": "Los Angeles Rams",
       "picks": {
         "jay": "Los Angeles Rams",
         "matt": "Los Angeles Rams",
@@ -219,7 +219,7 @@
     {
       "home": "New York Jets",
       "away": "Buffalo Bills",
-      "winner": "TBC",
+      "winner": "Buffalo Bills",
       "picks": {
         "jay": "Buffalo Bills",
         "matt": "Buffalo Bills",
@@ -238,7 +238,7 @@
     {
       "home": "Miami Dolphins",
       "away": "New England Patriots",
-      "winner": "TBC",
+      "winner": "New England Patriots",
       "picks": {
         "jay": "New England Patriots",
         "matt": "Miami Dolphins",
@@ -257,7 +257,7 @@
     {
       "home": "Cincinnati Bengals",
       "away": "Jacksonville Jaguars",
-      "winner": "TBC",
+      "winner": "Cincinnati Bengals",
       "picks": {
         "jay": "Jacksonville Jaguars",
         "matt": "Cincinnati Bengals",
@@ -276,7 +276,7 @@
     {
       "home": "New Orleans Saints",
       "away": "San Francisco 49ers",
-      "winner": "TBC",
+      "winner": "San Francisco 49ers",
       "picks": {
         "jay": "San Francisco 49ers",
         "matt": "San Francisco 49ers",
@@ -295,7 +295,7 @@
     {
       "home": "Baltimore Ravens",
       "away": "Cleveland Browns",
-      "winner": "TBC",
+      "winner": "Baltimore Ravens",
       "picks": {
         "jay": "Baltimore Ravens",
         "matt": "Baltimore Ravens",
@@ -314,7 +314,7 @@
     {
       "home": "Detroit Lions",
       "away": "Chicago Bears",
-      "winner": "TBC",
+      "winner": "Detroit Lions",
       "picks": {
         "jay": "Chicago Bears",
         "matt": "Detroit Lions",
