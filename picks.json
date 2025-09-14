@@ -165,7 +165,14 @@
       "winner": "TBC",
       "picks": {
         "jay": "Dallas Cowboys",
-        "matt": "Dallas Cowboys"
+        "matt": "Dallas Cowboys",
+        "ben": "Dallas Cowboys",
+        "coley": "Dallas Cowboys",
+        "gaz": "Dallas Cowboys",
+        "tony": "Dallas Cowboys",
+        "mark": "Dallas Cowboys",
+        "lee": "Dallas Cowboys",
+        "liam": "Dallas Cowboys"
       }
     },
     {
@@ -174,7 +181,14 @@
       "winner": "TBC",
       "picks": {
         "jay": "Seattle Seahawks",
-        "matt": "Pittsburgh Steelers"
+        "matt": "Pittsburgh Steelers",
+        "ben": "Pittsburgh Steelers",
+        "coley": "Pittsburgh Steelers",
+        "gaz": "Pittsburgh Steelers",
+        "tony": "Pittsburgh Steelers",
+        "mark": "Pittsburgh Steelers",
+        "lee": "Pittsburgh Steelers",
+        "liam": "Pittsburgh Steelers"
       }
     },
     {
@@ -183,7 +197,14 @@
       "winner": "TBC",
       "picks": {
         "jay": "Los Angeles Rams",
-        "matt": "Los Angeles Rams"
+        "matt": "Los Angeles Rams",
+        "ben": "Tennessee Titans",
+        "coley": "Los Angeles Rams",
+        "gaz": "Los Angeles Rams",
+        "tony": "Los Angeles Rams",
+        "mark": "Los Angeles Rams",
+        "lee": "Los Angeles Rams",
+        "liam": "Los Angeles Rams"
       }
     },
     {
@@ -192,7 +213,14 @@
       "winner": "TBC",
       "picks": {
         "jay": "Buffalo Bills",
-        "matt": "Buffalo Bills"
+        "matt": "Buffalo Bills",
+        "ben": "Buffalo Bills",
+        "coley": "Buffalo Bills",
+        "gaz": "Buffalo Bills",
+        "tony": "New York Jets",
+        "mark": "Buffalo Bills",
+        "lee": "Buffalo Bills",
+        "liam": "Buffalo Bills"
       }
     },
     {
@@ -201,7 +229,14 @@
       "winner": "TBC",
       "picks": {
         "jay": "New England Patriots",
-        "matt": "Miami Dolphins"
+        "matt": "Miami Dolphins",
+        "ben": "Miami Dolphins",
+        "coley": "Miami Dolphins",
+        "gaz": "Miami Dolphins",
+        "tony": "Miami Dolphins",
+        "mark": "Miami Dolphins",
+        "lee": "New England Patriots",
+        "liam": "Miami Dolphins"
       }
     },
     {
@@ -210,7 +245,14 @@
       "winner": "TBC",
       "picks": {
         "jay": "Jacksonville Jaguars",
-        "matt": "Cincinnati Bengals"
+        "matt": "Cincinnati Bengals",
+        "ben": "Cincinnati Bengals",
+        "coley": "Cincinnati Bengals",
+        "gaz": "Cincinnati Bengals",
+        "tony": "Cincinnati Bengals",
+        "mark": "Cincinnati Bengals",
+        "lee": "Cincinnati Bengals",
+        "liam": "Cincinnati Bengals"
       }
     },
     {
@@ -219,7 +261,14 @@
       "winner": "TBC",
       "picks": {
         "jay": "San Francisco 49ers",
-        "matt": "San Francisco 49ers"
+        "matt": "San Francisco 49ers",
+        "ben": "San Francisco 49ers",
+        "coley": "San Francisco 49ers",
+        "gaz": "San Francisco 49ers",
+        "tony": "New Orleans Saints",
+        "mark": "San Francisco 49ers",
+        "lee": "San Francisco 49ers",
+        "liam": "San Francisco 49ers"
       }
     },
     {
@@ -228,7 +277,14 @@
       "winner": "TBC",
       "picks": {
         "jay": "Baltimore Ravens",
-        "matt": "Baltimore Ravens"
+        "matt": "Baltimore Ravens",
+        "ben": "Baltimore Ravens",
+        "coley": "Baltimore Ravens",
+        "gaz": "Baltimore Ravens",
+        "tony": "Baltimore Ravens",
+        "mark": "Baltimore Ravens",
+        "lee": "Cleveland Browns",
+        "liam": "Baltimore Ravens"
       }
     },
     {
@@ -237,7 +293,14 @@
       "winner": "TBC",
       "picks": {
         "jay": "Chicago Bears",
-        "matt": "Detroit Lions"
+        "matt": "Detroit Lions",
+        "ben": "Detroit Lions",
+        "coley": "Detroit Lions",
+        "gaz": "Detroit Lions",
+        "tony": "Detroit Lions",
+        "mark": "Detroit Lions",
+        "lee": "Chicago Bears",
+        "liam": "Detroit Lions"
       }
     }
   ]
