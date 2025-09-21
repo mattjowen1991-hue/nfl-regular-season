@@ -337,7 +337,7 @@
     {
       "home": "Minnesota Vikings",
       "away": "Cincinnati Bengals",
-      "winner": "TBC",
+      "winner": "Minnesota Vikings",
       "picks": {
         "lee": "Cincinnati Bengals",
         "mark": "Cincinnati Bengals",
@@ -356,7 +356,7 @@
     {
       "home": "Jacksonville Jaguars",
       "away": "Houston Texans",
-      "winner": "TBC",
+      "winner": "Jacksonville Jaguars",
       "picks": {
         "lee": "Jacksonville Jaguars",
         "mark": "Jacksonville Jaguars",
@@ -375,7 +375,7 @@
     {
       "home": "Tennessee Titans",
       "away": "Indianapolis Colts",
-      "winner": "TBC",
+      "winner": "Indianapolis Colts",
       "picks": {
         "lee": "Indianapolis Colts",
         "mark": "Indianapolis Colts",
@@ -394,7 +394,7 @@
     {
       "home": "Washington Redskins",
       "away": "Las Vegas Raiders",
-      "winner": "TBC",
+      "winner": "Washington Redskins",
       "picks": {
         "lee": "Washington Redskins",
         "mark": "Washington Redskins",
@@ -413,7 +413,7 @@
     {
       "home": "Philadelphia Eagles",
       "away": "Los Angeles Rams",
-      "winner": "TBC",
+      "winner": "Philadelphia Eagles",
       "picks": {
         "lee": "Philadelphia Eagles",
         "mark": "Philadelphia Eagles",
@@ -432,7 +432,7 @@
     {
       "home": "Carolina Panthers",
       "away": "Atlanta Falcons",
-      "winner": "TBC",
+      "winner": "Carolina Panthers",
       "picks": {
         "lee": "Atlanta Falcons",
         "mark": "Atlanta Falcons",
@@ -451,7 +451,7 @@
     {
       "home": "New England Patriots",
       "away": "Pittsburgh Steelers",
-      "winner": "TBC",
+      "winner": "Pittsburgh Steelers",
       "picks": {
         "lee": "Pittsburgh Steelers",
         "mark": "Pittsburgh Steelers",
@@ -470,7 +470,7 @@
     {
       "home": "Cleveland Browns",
       "away": "Green Bay Packers",
-      "winner": "TBC",
+      "winner": "Cleveland Browns",
       "picks": {
         "lee": "Green Bay Packers",
         "mark": "Green Bay Packers",
@@ -489,7 +489,7 @@
     {
       "home": "Tampa Bay Buccaneers",
       "away": "New York Jets",
-      "winner": "TBC",
+      "winner": "Tampa Bay Buccaneers",
       "picks": {
         "lee": "New York Jets",
         "mark": "Tampa Bay Buccaneers",
