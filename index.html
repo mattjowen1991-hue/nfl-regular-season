@@ -590,6 +590,38 @@
     return upcoming[0] || null;
   }
 
+  /* ---------- NEW: Fallback win-rate (no picks.json required) ---------- */
+  function computeWinPctFromWeeks(weeks, playerId, config){
+    if(!Array.isArray(weeks)) return 0;
+    let correct = 0, total = 0;
+
+    for(const w of weeks){
+      // skip weeks that didn’t happen (all zeros)
+      const vals = Object.values(w.scores || {}).map(Number).filter(Number.isFinite);
+      if(!vals.some(v => v > 0)) continue;
+
+      const v = Number(w?.scores?.[playerId]);
+      if(!Number.isFinite(v)) continue;
+
+      // perfect target for the week
+      let target;
+      const map = config?.perfectWeekPoints || {};
+      if(map[w.week] != null){
+        target = Number(map[w.week]);
+      }else if(w.games != null){
+        target = Number(w.games);
+      }else if(vals.length){
+        target = Math.max(...vals); // best available proxy
+      }
+
+      if(Number.isFinite(target) && target > 0){
+        correct += Math.max(0, Math.min(v, target));
+        total   += target;
+      }
+    }
+    return total ? Math.round((correct / total) * 100) : 0;
+  }
+
   /* ---------- Profile Modal ---------- */
   function openProfile(playerId){
     const { playersById } = window.state;
@@ -597,7 +629,7 @@
     if(!player) return;
 
     const stats = computeProfileStats(window.weeks, playerId, window.config || {});
-    const pickAcc = computePickAccuracy(window.picks, playerId); // NEW
+    const pickAcc = computePickAccuracy(window.picks, playerId); // uses picks.json when available
     const bestTeam = computeBestTeamAccuracy(window.picks, playerId, window.config || {});
     const next = nextGameForTeam(window.schedule, player.team);
 
@@ -652,12 +684,17 @@
       nextEl.innerHTML = '';
     }
 
-    // Stats (Win Rate prefers pick accuracy; falls back to week-based)
+    // Stats (Win Rate prefers pick accuracy; falls back to week-level estimate)
     document.getElementById('statNFLWins').textContent =
       Number.isFinite(Number(player.nflWins)) ? Number(player.nflWins) : 0;
     document.getElementById('statGames').textContent   = stats.gamesPlayed;
     document.getElementById('statAvg').textContent     = stats.avgPerGame.toFixed(2);
-    document.getElementById('statWinRate').textContent = pickAcc ? `${pickAcc.pct}%` : (stats.winRate + '%');
+
+    /* CHANGED LINE BELOW */
+    const fallbackPct = computeWinPctFromWeeks(window.weeks, playerId, window.config || {});
+    document.getElementById('statWinRate').textContent =
+      pickAcc ? `${pickAcc.pct}%` : `${fallbackPct}%`;
+
     document.getElementById('statBest').textContent    = stats.bestWeek ? `W${stats.bestWeek} (${stats.bestPoints})` : '—';
     document.getElementById('statStreak').textContent  = stats.longest;
     document.getElementById('statPerfect').textContent = stats.perfectWeeks;
