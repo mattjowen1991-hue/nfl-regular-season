@@ -514,7 +514,7 @@
     {
       "home": "Pittsburgh Steelers",
       "away": "Minnesota Vikings",
-      "winner": "TBC",
+      "winner": "Pittsburgh Steelers",
       "picks": {
         "lee": "Pittsburgh Steelers",
         "mark": "Minnesota Vikings",
@@ -532,7 +532,7 @@
     {
       "home": "Atlanta Falcons",
       "away": "Washington Redskins",
-      "winner": "TBC",
+      "winner": "Atlanta Falcons",
       "picks": {
         "lee": "Washington Redskins",
         "mark": "Washington Redskins",
@@ -551,7 +551,7 @@
     {
       "home": "New York Giants",
       "away": "Los Angeles Chargers",
-      "winner": "TBC",
+      "winner": "New York Giants",
       "picks": {
         "lee": "Los Angeles Chargers",
         "mark": "Los Angeles Chargers",
@@ -570,7 +570,7 @@
     {
       "home": "Houston Texans",
       "away": "Tennessee Titans",
-      "winner": "TBC",
+      "winner": "Houston Texans",
       "picks": {
         "lee": "Tennessee Titans",
         "mark": "Houston Texans",
@@ -589,7 +589,7 @@
     {
       "home": "Tampa Bay Buccaneers",
       "away": "Philadelphia Eagles",
-      "winner": "TBC",
+      "winner": "Philadelphia Eagles",
       "picks": {
         "lee": "Philadelphia Eagles",
         "mark": "Philadelphia Eagles",
@@ -608,7 +608,7 @@
     {
       "home": "New England Patriots",
       "away": "Carolina Panthers",
-      "winner": "TBC",
+      "winner": "New England Patriots",
       "picks": {
         "lee": "New England Patriots",
         "mark": "New England Patriots",
@@ -627,7 +627,7 @@
     {
       "home": "Buffalo Bills",
       "away": "New Orleans Saints",
-      "winner": "TBC",
+      "winner": "Buffalo Bills",
       "picks": {
         "lee": "Buffalo Bills",
         "mark": "Buffalo Bills",
@@ -646,7 +646,7 @@
     {
       "home": "Detroit Lions",
       "away": "Cleveland Browns",
-      "winner": "TBC",
+      "winner": "Detroit Lions",
       "picks": {
         "lee": "Detroit Lions",
         "mark": "Detroit Lions",
