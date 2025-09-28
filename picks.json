@@ -328,9 +328,10 @@
         "joe": "Detroit Lions",
         "jarv": "Detroit Lions",
         "ste": "Detroit Lions"
-      }
-    ]
-   },
+       }
+    }
+  ]
+},
  {
   "week": 3,
   "games": [
@@ -504,8 +505,9 @@
         "coley": "Tampa Bay Buccaneers",
         "jarv": "Tampa Bay Buccaneers"
       }
-     ]
-   },
+    }
+  ]
+},
   {
   "week": 4,
   "games": [
