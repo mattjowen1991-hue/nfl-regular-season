@@ -525,7 +525,8 @@
         "liam": "Minnesota Vikings",
         "gaz": "Minnesota Vikings",
         "matt": "Minnesota Vikings",
-        "jarv": "Minnesota Vikings"
+        "jarv": "Minnesota Vikings",
+        "ste": "Minnesota Vikings"
       }
     },
     {
@@ -543,7 +544,8 @@
         "liam": "Washington Redskins",
         "gaz": "Atlanta Falcons",
         "matt": "Washington Redskins",
-        "jarv": "Washington Redskins"
+        "jarv": "Washington Redskins",
+        "ste": "Washington Redskins"
       }
     },
     {
@@ -561,7 +563,8 @@
         "liam": "Los Angeles Chargers",
         "gaz": "Los Angeles Chargers",
         "matt": "Los Angeles Chargers",
-        "jarv": "Los Angeles Chargers"
+        "jarv": "Los Angeles Chargers",
+        "ste": "Los Angeles Chargers"
       }
     },
     {
@@ -579,7 +582,8 @@
         "liam": "Houston Texans",
         "gaz": "Houston Texans",
         "matt": "Houston Texans",
-        "jarv": "Houston Texans"
+        "jarv": "Houston Texans",
+        "ste": "Houston Texans"
       }
     },
     {
@@ -597,7 +601,8 @@
         "liam": "Philadelphia Eagles",
         "gaz": "Philadelphia Eagles",
         "matt": "Philadelphia Eagles",
-        "jarv": "Philadelphia Eagles"
+        "jarv": "Philadelphia Eagles",
+        "ste": "Philadelphia Eagles"
       }
     },
     {
@@ -615,7 +620,8 @@
         "liam": "New England Patriots",
         "gaz": "New England Patriots",
         "matt": "New England Patriots",
-        "jarv": "New England Patriots"
+        "jarv": "New England Patriots",
+        "ste": "New England Patriots"
       }
     },
     {
@@ -633,7 +639,8 @@
         "liam": "Buffalo Bills",
         "gaz": "Buffalo Bills",
         "matt": "Buffalo Bills",
-        "jarv": "Buffalo Bills"
+        "jarv": "Buffalo Bills",
+        "ste": "Buffalo Bills"
       }
     },
     {
@@ -651,7 +658,8 @@
         "liam": "Detroit Lions",
         "gaz": "Detroit Lions",
         "matt": "Detroit Lions",
-        "jarv": "Detroit Lions"
+        "jarv": "Detroit Lions",
+        "ste": "Detroit Lions"
       }
     }
   ]
