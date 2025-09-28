@@ -519,13 +519,13 @@
         "lee": "Pittsburgh Steelers",
         "mark": "Minnesota Vikings",
         "jay": "Minnesota Vikings",
-        "joe": "Minnesota Vikings",
         "tony": "Pittsburgh Steelers",
         "ben": "Minnesota Vikings",
         "coley": "Minnesota Vikings",
         "liam": "Minnesota Vikings",
         "gaz": "Minnesota Vikings",
-        "matt": "Minnesota Vikings"
+        "matt": "Minnesota Vikings",
+        "jarv": "Minnesota Vikings"
       }
     },
     {
@@ -542,7 +542,8 @@
         "coley": "Washington Redskins",
         "liam": "Washington Redskins",
         "gaz": "Atlanta Falcons",
-        "matt": "Washington Redskins"
+        "matt": "Washington Redskins",
+        "jarv": "Washington Redskins"
       }
     },
     {
@@ -559,7 +560,8 @@
         "coley": "Los Angeles Chargers",
         "liam": "Los Angeles Chargers",
         "gaz": "Los Angeles Chargers",
-        "matt": "Los Angeles Chargers"
+        "matt": "Los Angeles Chargers",
+        "jarv": "Los Angeles Chargers"
       }
     },
     {
@@ -576,7 +578,8 @@
         "coley": "Houston Texans",
         "liam": "Houston Texans",
         "gaz": "Houston Texans",
-        "matt": "Houston Texans"
+        "matt": "Houston Texans",
+        "jarv": "Houston Texans"
       }
     },
     {
@@ -593,7 +596,8 @@
         "coley": "Philadelphia Eagles",
         "liam": "Philadelphia Eagles",
         "gaz": "Philadelphia Eagles",
-        "matt": "Philadelphia Eagles"
+        "matt": "Philadelphia Eagles",
+        "jarv": "Philadelphia Eagles"
       }
     },
     {
@@ -610,7 +614,8 @@
         "coley": "New England Patriots",
         "liam": "New England Patriots",
         "gaz": "New England Patriots",
-        "matt": "New England Patriots"
+        "matt": "New England Patriots",
+        "jarv": "New England Patriots"
       }
     },
     {
@@ -627,7 +632,8 @@
         "coley": "Buffalo Bills",
         "liam": "Buffalo Bills",
         "gaz": "Buffalo Bills",
-        "matt": "Buffalo Bills"
+        "matt": "Buffalo Bills",
+        "jarv": "Buffalo Bills"
       }
     },
     {
@@ -644,7 +650,8 @@
         "coley": "Detroit Lions",
         "liam": "Detroit Lions",
         "gaz": "Detroit Lions",
-        "matt": "Detroit Lions"
+        "matt": "Detroit Lions",
+        "jarv": "Detroit Lions"
       }
     }
   ]
