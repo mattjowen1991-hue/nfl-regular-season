@@ -690,7 +690,7 @@
     {
       "home": "Houston Texans",
       "away": "Baltimore Ravens",
-      "winner": "Houston Texan",
+      "winner": "Houston Texans",
       "picks": {
         "lee": "Baltimore Ravens",
         "ben": "Houston Texans",
@@ -956,8 +956,8 @@
         "coley": "Pittsburgh Steelers",
         "jarv": "Pittsburgh Steelers",
         "matt": "Pittsburgh Steelers"
-      }
+       }
     }
   ]
 }
-}
+]
