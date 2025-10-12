@@ -809,154 +809,154 @@
     {
       "home": "New York Jets",
       "away": "Denver Broncos",
-      "winner": "TBC",
+      "winner": "",
       "picks": {
-        "liam": "Denver Broncos",
-        "jay": "New York Jets",
         "lee": "Denver Broncos",
-        "tony": "Denver Broncos",
         "ben": "Denver Broncos",
-        "mark": "Denver Broncos",
-        "ste": "Denver Broncos",
-        "gaz": "Denver Broncos",
+        "tony": "Denver Broncos",
         "joe": "Denver Broncos",
-        "coley": "New York Jets",
+        "mark": "Denver Broncos",
+        "liam": "Denver Broncos",
+        "ste": "Denver Broncos",
         "jarv": "Denver Broncos",
-        "matt": "Denver Broncos"
+        "gaz": "",
+        "coley": "New York Jets",
+        "matt": "Denver Broncos",
+        "jay": "New York Jets"
       }
     },
     {
       "home": "Baltimore Ravens",
       "away": "Los Angeles Rams",
-      "winner": "TBC",
+      "winner": "",
       "picks": {
-        "liam": "Los Angeles Rams",
-        "jay": "Los Angeles Rams",
         "lee": "Los Angeles Rams",
-        "tony": "Los Angeles Rams",
         "ben": "Los Angeles Rams",
-        "mark": "Los Angeles Rams",
-        "ste": "Los Angeles Rams",
-        "gaz": "MISSED",
+        "tony": "Los Angeles Rams",
         "joe": "Los Angeles Rams",
+        "mark": "Los Angeles Rams",
+        "liam": "Los Angeles Rams",
+        "ste": "Los Angeles Rams",
+        "jarv": "Los Angeles Rams",
+        "gaz": "missed",
         "coley": "Baltimore Ravens",
-        "jarv": "Baltimore Ravens",
-        "matt": "Los Angeles Rams"
+        "matt": "Los Angeles Rams",
+        "jay": "Los Angeles Rams"
       }
     },
     {
       "home": "Carolina Panthers",
       "away": "Dallas Cowboys",
-      "winner": "TBC",
+      "winner": "",
       "picks": {
-        "liam": "Dallas Cowboys",
-        "jay": "Carolina Panthers",
         "lee": "Dallas Cowboys",
-        "tony": "Dallas Cowboys",
         "ben": "Dallas Cowboys",
-        "mark": "Dallas Cowboys",
-        "ste": "Dallas Cowboys",
-        "gaz": "Carolina Panthers",
+        "tony": "Dallas Cowboys",
         "joe": "Dallas Cowboys",
-        "coley": "Dallas Cowboys",
+        "mark": "Dallas Cowboys",
+        "liam": "Dallas Cowboys",
+        "ste": "Dallas Cowboys",
         "jarv": "Dallas Cowboys",
-        "matt": "Dallas Cowboys"
+        "gaz": "Carolina Panthers",
+        "coley": "Dallas Cowboys",
+        "matt": "Dallas Cowboys",
+        "jay": "Carolina Panthers"
       }
     },
     {
       "home": "Indianapolis Colts",
       "away": "Arizona Cardinals",
-      "winner": "TBC",
+      "winner": "",
       "picks": {
-        "liam": "Indianapolis Colts",
-        "jay": "Indianapolis Colts",
         "lee": "Indianapolis Colts",
-        "tony": "Indianapolis Colts",
         "ben": "Indianapolis Colts",
-        "mark": "Indianapolis Colts",
-        "ste": "Indianapolis Colts",
-        "gaz": "Indianapolis Colts",
+        "tony": "Indianapolis Colts",
         "joe": "Indianapolis Colts",
-        "coley": "Indianapolis Colts",
+        "mark": "Indianapolis Colts",
+        "liam": "Indianapolis Colts",
+        "ste": "Indianapolis Colts",
         "jarv": "Indianapolis Colts",
-        "matt": "Indianapolis Colts"
+        "gaz": "Indianapolis Colts",
+        "coley": "Indianapolis Colts",
+        "matt": "Indianapolis Colts",
+        "jay": "Indianapolis Colts"
       }
     },
     {
       "home": "Jacksonville Jaguars",
       "away": "Seattle Seahawks",
-      "winner": "TBC",
+      "winner": "",
       "picks": {
-        "liam": "Jacksonville Jaguars",
-        "jay": "Seattle Seahawks",
         "lee": "Jacksonville Jaguars",
-        "tony": "Jacksonville Jaguars",
         "ben": "Seattle Seahawks",
-        "mark": "Jacksonville Jaguars",
-        "ste": "Seattle Seahawks",
-        "gaz": "Jacksonville Jaguars",
+        "tony": "Jacksonville Jaguars",
         "joe": "Seattle Seahawks",
-        "coley": "Seattle Seahawks",
+        "mark": "Jacksonville Jaguars",
+        "liam": "Jacksonville Jaguars",
+        "ste": "Seattle Seahawks",
         "jarv": "Seattle Seahawks",
-        "matt": "Jacksonville Jaguars"
+        "gaz": "Jacksonville Jaguars",
+        "coley": "Seattle Seahawks",
+        "matt": "Jacksonville Jaguars",
+        "jay": "Seattle Seahawks"
       }
     },
     {
       "home": "Miami Dolphins",
       "away": "Los Angeles Chargers",
-      "winner": "TBC",
+      "winner": "",
       "picks": {
-        "liam": "Los Angeles Chargers",
-        "jay": "Miami Dolphins",
         "lee": "Los Angeles Chargers",
-        "tony": "Miami Dolphins",
         "ben": "Los Angeles Chargers",
-        "mark": "Los Angeles Chargers",
-        "ste": "Los Angeles Chargers",
-        "gaz": "Los Angeles Chargers",
+        "tony": "Miami Dolphins",
         "joe": "Los Angeles Chargers",
-        "coley": "Los Angeles Chargers",
+        "mark": "Los Angeles Chargers",
+        "liam": "Los Angeles Chargers",
+        "ste": "Los Angeles Chargers",
         "jarv": "Los Angeles Chargers",
-        "matt": "Los Angeles Chargers"
+        "gaz": "Los Angeles Chargers",
+        "coley": "Los Angeles Chargers",
+        "matt": "Los Angeles Chargers",
+        "jay": "Miami Dolphins"
       }
     },
     {
       "home": "New Orleans Saints",
       "away": "New England Patriots",
-      "winner": "TBC",
+      "winner": "",
       "picks": {
-        "liam": "New England Patriots",
-        "jay": "New England Patriots",
         "lee": "New England Patriots",
-        "tony": "New England Patriots",
         "ben": "New England Patriots",
-        "mark": "New England Patriots",
-        "ste": "New England Patriots",
-        "gaz": "New England Patriots",
+        "tony": "New England Patriots",
         "joe": "New England Patriots",
-        "coley": "New England Patriots",
+        "mark": "New England Patriots",
+        "liam": "New England Patriots",
+        "ste": "New England Patriots",
         "jarv": "New England Patriots",
-        "matt": "New England Patriots"
+        "gaz": "New England Patriots",
+        "coley": "New England Patriots",
+        "matt": "New England Patriots",
+        "jay": "New England Patriots"
       }
     },
     {
       "home": "Pittsburgh Steelers",
       "away": "Cleveland Browns",
-      "winner": "TBC",
+      "winner": "",
       "picks": {
-        "liam": "Pittsburgh Steelers",
-        "jay": "Pittsburgh Steelers",
         "lee": "Pittsburgh Steelers",
-        "tony": "Pittsburgh Steelers",
         "ben": "Pittsburgh Steelers",
-        "mark": "Pittsburgh Steelers",
-        "ste": "Pittsburgh Steelers",
-        "gaz": "Pittsburgh Steelers",
+        "tony": "Pittsburgh Steelers",
         "joe": "Pittsburgh Steelers",
-        "coley": "Pittsburgh Steelers",
+        "mark": "Pittsburgh Steelers",
+        "liam": "Pittsburgh Steelers",
+        "ste": "Pittsburgh Steelers",
         "jarv": "Pittsburgh Steelers",
-        "matt": "Pittsburgh Steelers"
-       }
+        "gaz": "Pittsburgh Steelers",
+        "coley": "Pittsburgh Steelers",
+        "matt": "Pittsburgh Steelers",
+        "jay": "Pittsburgh Steelers"
+      }
     }
   ]
 }
