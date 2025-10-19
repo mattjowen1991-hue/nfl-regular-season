@@ -959,5 +959,143 @@
       }
     }
   ]
+},
+ {
+  "week": 7,
+  "games": [
+    {
+      "home": "Jacksonville Jaguars",
+      "away": "Los Angeles Rams",
+      "winner": "",
+      "picks": {
+        "lee": "Jacksonville Jaguars",
+        "ben": "Los Angeles Rams",
+        "tony": "Los Angeles Rams",
+        "joe": "Los Angeles Rams",
+        "mark": "Los Angeles Rams",
+        "liam": "",
+        "ste": "Los Angeles Rams",
+        "jarv": "",
+        "gaz": "Los Angeles Rams",
+        "coley": "Jacksonville Jaguars",
+        "matt": "Los Angeles Rams",
+        "jay": "Jacksonville Jaguars"
+      }
+    },
+    {
+      "home": "Minnesota Vikings",
+      "away": "Philadelphia Eagles",
+      "winner": "",
+      "picks": {
+        "lee": "Minnesota Vikings",
+        "ben": "Philadelphia Eagles",
+        "tony": "Minnesota Vikings",
+        "joe": "Philadelphia Eagles",
+        "mark": "Philadelphia Eagles",
+        "liam": "",
+        "ste": "Philadelphia Eagles",
+        "jarv": "",
+        "gaz": "Philadelphia Eagles",
+        "coley": "Philadelphia Eagles",
+        "matt": "Philadelphia Eagles",
+        "jay": "Minnesota Vikings"
+      }
+    },
+    {
+      "home": "Tennessee Titans",
+      "away": "New England Patriots",
+      "winner": "",
+      "picks": {
+        "lee": "New England Patriots",
+        "ben": "New England Patriots",
+        "tony": "New England Patriots",
+        "joe": "New England Patriots",
+        "mark": "New England Patriots",
+        "liam": "",
+        "ste": "New England Patriots",
+        "jarv": "",
+        "gaz": "New England Patriots",
+        "coley": "New England Patriots",
+        "matt": "New England Patriots",
+        "jay": "New England Patriots"
+      }
+    },
+    {
+      "home": "New York Jets",
+      "away": "Carolina Panthers",
+      "winner": "",
+      "picks": {
+        "lee": "Carolina Panthers",
+        "ben": "Carolina Panthers",
+        "tony": "Carolina Panthers",
+        "joe": "Carolina Panthers",
+        "mark": "Carolina Panthers",
+        "liam": "",
+        "ste": "Carolina Panthers",
+        "jarv": "",
+        "gaz": "Carolina Panthers",
+        "coley": "Carolina Panthers",
+        "matt": "Carolina Panthers",
+        "jay": "Carolina Panthers"
+      }
+    },
+    {
+      "home": "Cleveland Browns",
+      "away": "Miami Dolphins",
+      "winner": "",
+      "picks": {
+        "lee": "Cleveland Browns",
+        "ben": "Miami Dolphins",
+        "tony": "Miami Dolphins",
+        "joe": "Cleveland Browns",
+        "mark": "Cleveland Browns",
+        "liam": "",
+        "ste": "Cleveland Browns",
+        "jarv": "",
+        "gaz": "Cleveland Browns",
+        "coley": "Miami Dolphins",
+        "matt": "Cleveland Browns",
+        "jay": "Miami Dolphins"
+      }
+    },
+    {
+      "home": "Chicago Bears",
+      "away": "New Orleans Saints",
+      "winner": "",
+      "picks": {
+        "lee": "Chicago Bears",
+        "ben": "Chicago Bears",
+        "tony": "New Orleans Saints",
+        "joe": "Chicago Bears",
+        "mark": "Chicago Bears",
+        "liam": "",
+        "ste": "Chicago Bears",
+        "jarv": "",
+        "gaz": "Chicago Bears",
+        "coley": "New Orleans Saints",
+        "matt": "Chicago Bears",
+        "jay": "Chicago Bears"
+      }
+    },
+    {
+      "home": "Kansas City Chiefs",
+      "away": "Las Vegas Raiders",
+      "winner": "",
+      "picks": {
+        "lee": "Kansas City Chiefs",
+        "ben": "Kansas City Chiefs",
+        "tony": "Las Vegas Raiders",
+        "joe": "Kansas City Chiefs",
+        "mark": "Kansas City Chiefs",
+        "liam": "",
+        "ste": "Kansas City Chiefs",
+        "jarv": "",
+        "gaz": "Kansas City Chiefs",
+        "coley": "Kansas City Chiefs",
+        "matt": "Kansas City Chiefs",
+        "jay": "Kansas City Chiefs"
+      }
+    }
+  ]
 }
 ]
