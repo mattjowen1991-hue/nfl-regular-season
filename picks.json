@@ -966,7 +966,7 @@
     {
       "home": "Jacksonville Jaguars",
       "away": "Los Angeles Rams",
-      "winner": "",
+      "winner": "Los Angeles Rams",
       "picks": {
         "lee": "Jacksonville Jaguars",
         "ben": "Los Angeles Rams",
@@ -985,7 +985,7 @@
     {
       "home": "Minnesota Vikings",
       "away": "Philadelphia Eagles",
-      "winner": "",
+      "winner": "Philadelphia Eagles",
       "picks": {
         "lee": "Minnesota Vikings",
         "ben": "Philadelphia Eagles",
@@ -1004,7 +1004,7 @@
     {
       "home": "Tennessee Titans",
       "away": "New England Patriots",
-      "winner": "",
+      "winner": "New England Patriots",
       "picks": {
         "lee": "New England Patriots",
         "ben": "New England Patriots",
@@ -1023,7 +1023,7 @@
     {
       "home": "New York Jets",
       "away": "Carolina Panthers",
-      "winner": "",
+      "winner": "Carolina Panthers",
       "picks": {
         "lee": "Carolina Panthers",
         "ben": "Carolina Panthers",
@@ -1042,7 +1042,7 @@
     {
       "home": "Cleveland Browns",
       "away": "Miami Dolphins",
-      "winner": "",
+      "winner": "Cleveland Browns",
       "picks": {
         "lee": "Cleveland Browns",
         "ben": "Miami Dolphins",
@@ -1061,7 +1061,7 @@
     {
       "home": "Chicago Bears",
       "away": "New Orleans Saints",
-      "winner": "",
+      "winner": "Chicago Bears",
       "picks": {
         "lee": "Chicago Bears",
         "ben": "Chicago Bears",
