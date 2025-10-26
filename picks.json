@@ -1104,7 +1104,7 @@
     {
       "home": "Miami Dolphins",
       "away": "Atlanta Falcons",
-      "winner": "",
+      "winner": "Miami Dolphins",
       "picks": {
         "lee": "Atlanta Falcons",
         "ben": "Atlanta Falcons",
@@ -1123,7 +1123,7 @@
     {
       "home": "Baltimore Ravens",
       "away": "Chicago Bears",
-      "winner": "",
+      "winner": "Baltimore Ravens",
       "picks": {
         "lee": "Chicago Bears",
         "ben": "Chicago Bears",
@@ -1142,7 +1142,7 @@
     {
       "home": "Cincinnati Bengals",
       "away": "New York Jets",
-      "winner": "",
+      "winner": "New York Jets",
       "picks": {
         "lee": "Cincinnati Bengals",
         "ben": "Cincinnati Bengals",
@@ -1161,7 +1161,7 @@
     {
       "home": "Carolina Panthers",
       "away": "Buffalo Bills",
-      "winner": "",
+      "winner": "Buffalo Bills",
       "picks": {
         "lee": "Buffalo Bills",
         "ben": "Buffalo Bills",
@@ -1180,7 +1180,7 @@
     {
       "home": "Houston Texans",
       "away": "San Francisco 49ers",
-      "winner": "",
+      "winner": "Houston Texans",
       "picks": {
         "lee": "San Francisco 49ers",
         "ben": "San Francisco 49ers",
@@ -1199,7 +1199,7 @@
     {
       "home": "New England Patriots",
       "away": "Cleveland Browns",
-      "winner": "",
+      "winner": "New England Patriots",
       "picks": {
         "lee": "New England Patriots",
         "ben": "New England Patriots",
@@ -1218,7 +1218,7 @@
     {
       "home": "Philadelphia Eagles",
       "away": "New York Giants",
-      "winner": "",
+      "winner": "Philadelphia Eagles",
       "picks": {
         "lee": "Philadelphia Eagles",
         "ben": "Philadelphia Eagles",
