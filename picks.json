@@ -809,7 +809,7 @@
     {
       "home": "New York Jets",
       "away": "Denver Broncos",
-      "winner": "",
+      "winner": "Denver Broncos",
       "picks": {
         "lee": "Denver Broncos",
         "ben": "Denver Broncos",
@@ -828,7 +828,7 @@
     {
       "home": "Baltimore Ravens",
       "away": "Los Angeles Rams",
-      "winner": "",
+      "winner": "Los Angeles Rams",
       "picks": {
         "lee": "Los Angeles Rams",
         "ben": "Los Angeles Rams",
@@ -847,7 +847,7 @@
     {
       "home": "Carolina Panthers",
       "away": "Dallas Cowboys",
-      "winner": "",
+      "winner": "Carolina Panthers",
       "picks": {
         "lee": "Dallas Cowboys",
         "ben": "Dallas Cowboys",
@@ -866,7 +866,7 @@
     {
       "home": "Indianapolis Colts",
       "away": "Arizona Cardinals",
-      "winner": "",
+      "winner": "Indianapolis Colts",
       "picks": {
         "lee": "Indianapolis Colts",
         "ben": "Indianapolis Colts",
@@ -885,7 +885,7 @@
     {
       "home": "Jacksonville Jaguars",
       "away": "Seattle Seahawks",
-      "winner": "",
+      "winner": "Seattle Seahawks",
       "picks": {
         "lee": "Jacksonville Jaguars",
         "ben": "Seattle Seahawks",
@@ -904,7 +904,7 @@
     {
       "home": "Miami Dolphins",
       "away": "Los Angeles Chargers",
-      "winner": "",
+      "winner": "Los Angeles Chargers",
       "picks": {
         "lee": "Los Angeles Chargers",
         "ben": "Los Angeles Chargers",
@@ -923,7 +923,7 @@
     {
       "home": "New Orleans Saints",
       "away": "New England Patriots",
-      "winner": "",
+      "winner": "New England Patriots",
       "picks": {
         "lee": "New England Patriots",
         "ben": "New England Patriots",
@@ -942,7 +942,7 @@
     {
       "home": "Pittsburgh Steelers",
       "away": "Cleveland Browns",
-      "winner": "",
+      "winner": "Pittsburgh Steelers",
       "picks": {
         "lee": "Pittsburgh Steelers",
         "ben": "Pittsburgh Steelers",
@@ -1080,7 +1080,7 @@
     {
       "home": "Kansas City Chiefs",
       "away": "Las Vegas Raiders",
-      "winner": "",
+      "winner": "Kansas City Chiefs",
       "picks": {
         "lee": "Kansas City Chiefs",
         "ben": "Kansas City Chiefs",
