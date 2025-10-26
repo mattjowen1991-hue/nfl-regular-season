@@ -1097,5 +1097,143 @@
       }
     }
   ]
+},
+ {
+  "week": 8,
+  "games": [
+    {
+      "home": "Miami Dolphins",
+      "away": "Atlanta Falcons",
+      "winner": "",
+      "picks": {
+        "lee": "Atlanta Falcons",
+        "ben": "Atlanta Falcons",
+        "tony": "Atlanta Falcons",
+        "joe": "Atlanta Falcons",
+        "mark": "Atlanta Falcons",
+        "liam": "Atlanta Falcons",
+        "ste": "Atlanta Falcons",
+        "jarv": "Atlanta Falcons",
+        "gaz": "Atlanta Falcons",
+        "coley": "Atlanta Falcons",
+        "matt": "Atlanta Falcons",
+        "jay": "Atlanta Falcons"
+      }
+    },
+    {
+      "home": "Baltimore Ravens",
+      "away": "Chicago Bears",
+      "winner": "",
+      "picks": {
+        "lee": "Chicago Bears",
+        "ben": "Chicago Bears",
+        "tony": "Chicago Bears",
+        "joe": "Baltimore Ravens",
+        "mark": "Baltimore Ravens",
+        "liam": "Baltimore Ravens",
+        "ste": "Chicago Bears",
+        "jarv": "Baltimore Ravens",
+        "gaz": "Baltimore Ravens",
+        "coley": "Baltimore Ravens",
+        "matt": "Chicago Bears",
+        "jay": "Chicago Bears"
+      }
+    },
+    {
+      "home": "Cincinnati Bengals",
+      "away": "New York Jets",
+      "winner": "",
+      "picks": {
+        "lee": "Cincinnati Bengals",
+        "ben": "Cincinnati Bengals",
+        "tony": "Cincinnati Bengals",
+        "joe": "Cincinnati Bengals",
+        "mark": "Cincinnati Bengals",
+        "liam": "Cincinnati Bengals",
+        "ste": "Cincinnati Bengals",
+        "jarv": "Cincinnati Bengals",
+        "gaz": "Cincinnati Bengals",
+        "coley": "Cincinnati Bengals",
+        "matt": "Cincinnati Bengals",
+        "jay": "Cincinnati Bengals"
+      }
+    },
+    {
+      "home": "Carolina Panthers",
+      "away": "Buffalo Bills",
+      "winner": "",
+      "picks": {
+        "lee": "Buffalo Bills",
+        "ben": "Buffalo Bills",
+        "tony": "Buffalo Bills",
+        "joe": "Buffalo Bills",
+        "mark": "Buffalo Bills",
+        "liam": "Buffalo Bills",
+        "ste": "Buffalo Bills",
+        "jarv": "Buffalo Bills",
+        "gaz": "Buffalo Bills",
+        "coley": "Buffalo Bills",
+        "matt": "Buffalo Bills",
+        "jay": "Buffalo Bills"
+      }
+    },
+    {
+      "home": "Houston Texans",
+      "away": "San Francisco 49ers",
+      "winner": "",
+      "picks": {
+        "lee": "San Francisco 49ers",
+        "ben": "San Francisco 49ers",
+        "tony": "San Francisco 49ers",
+        "joe": "San Francisco 49ers",
+        "mark": "San Francisco 49ers",
+        "liam": "Houston Texans",
+        "ste": "San Francisco 49ers",
+        "jarv": "Houston Texans",
+        "gaz": "Houston Texans",
+        "coley": "Houston Texans",
+        "matt": "San Francisco 49ers",
+        "jay": "San Francisco 49ers"
+      }
+    },
+    {
+      "home": "New England Patriots",
+      "away": "Cleveland Browns",
+      "winner": "",
+      "picks": {
+        "lee": "New England Patriots",
+        "ben": "New England Patriots",
+        "tony": "New England Patriots",
+        "joe": "New England Patriots",
+        "mark": "New England Patriots",
+        "liam": "New England Patriots",
+        "ste": "New England Patriots",
+        "jarv": "New England Patriots",
+        "gaz": "New England Patriots",
+        "coley": "New England Patriots",
+        "matt": "New England Patriots",
+        "jay": "New England Patriots"
+      }
+    },
+    {
+      "home": "Philadelphia Eagles",
+      "away": "New York Giants",
+      "winner": "",
+      "picks": {
+        "lee": "Philadelphia Eagles",
+        "ben": "Philadelphia Eagles",
+        "tony": "Philadelphia Eagles",
+        "joe": "Philadelphia Eagles",
+        "mark": "Philadelphia Eagles",
+        "liam": "Philadelphia Eagles",
+        "ste": "Philadelphia Eagles",
+        "jarv": "Philadelphia Eagles",
+        "gaz": "Philadelphia Eagles",
+        "coley": "Philadelphia Eagles",
+        "matt": "Philadelphia Eagles",
+        "jay": "Philadelphia Eagles"
+      }
+    }
+  ]
 }
 ]
