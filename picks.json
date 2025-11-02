@@ -1235,5 +1235,162 @@
       }
     }
   ]
+},
+ {
+  "week": 8,
+  "games": [
+    {
+      "home": "New York Giants",
+      "away": "San Francisco 49ers",
+      "winner": "San Francisco 49ers",
+      "picks": {
+        "matt": "San Francisco 49ers",
+        "jarv": "San Francisco 49ers",
+        "gaz": "New York Giants",
+        "joe": "",
+        "ben": "San Francisco 49ers",
+        "coley": "New York Giants",
+        "mark": "San Francisco 49ers",
+        "ste": "",
+        "tony": "missed",
+        "jay": "San Francisco 49ers",
+        "lee": "San Francisco 49ers",
+        "liam": "San Francisco 49ers"
+      }
+    },
+    {
+      "home": "Tennessee Titans",
+      "away": "Los Angeles Chargers",
+      "winner": "Los Angeles Chargers",
+      "picks": {
+        "matt": "Los Angeles Chargers",
+        "jarv": "Los Angeles Chargers",
+        "gaz": "Los Angeles Chargers",
+        "joe": "Los Angeles Chargers",
+        "ben": "Los Angeles Chargers",
+        "coley": "Los Angeles Chargers",
+        "mark": "Los Angeles Chargers",
+        "ste": "",
+        "tony": "missed",
+        "jay": "Los Angeles Chargers",
+        "lee": "Los Angeles Chargers",
+        "liam": "Los Angeles Chargers"
+      }
+    },
+    {
+      "home": "Detroit Lions",
+      "away": "Minnesota Vikings",
+      "winner": "Minnesota Vikings",
+      "picks": {
+        "matt": "Detroit Lions",
+        "jarv": "Detroit Lions",
+        "gaz": "Detroit Lions",
+        "joe": "Detroit Lions",
+        "ben": "Detroit Lions",
+        "coley": "Detroit Lions",
+        "mark": "Detroit Lions",
+        "ste": "",
+        "tony": "missed",
+        "jay": "Detroit Lions",
+        "lee": "Minnesota Vikings",
+        "liam": "Detroit Lions"
+      }
+    },
+    {
+      "home": "New England Patriots",
+      "away": "Atlanta Falcons",
+      "winner": "New England Patriots",
+      "picks": {
+        "matt": "New England Patriots",
+        "jarv": "New England Patriots",
+        "gaz": "New England Patriots",
+        "joe": "New England Patriots",
+        "ben": "New England Patriots",
+        "coley": "Atlanta Falcons",
+        "mark": "New England Patriots",
+        "ste": "",
+        "tony": "missed",
+        "jay": "New England Patriots",
+        "lee": "New England Patriots",
+        "liam": "New England Patriots"
+      }
+    },
+    {
+      "home": "Pittsburgh Steelers",
+      "away": "Indianapolis Colts",
+      "winner": "Pittsburgh Steelers",
+      "picks": {
+        "matt": "Indianapolis Colts",
+        "jarv": "Indianapolis Colts",
+        "gaz": "Indianapolis Colts",
+        "joe": "Indianapolis Colts",
+        "ben": "Indianapolis Colts",
+        "coley": "Indianapolis Colts",
+        "mark": "Indianapolis Colts",
+        "ste": "",
+        "tony": "missed",
+        "jay": "Indianapolis Colts",
+        "lee": "Indianapolis Colts",
+        "liam": "Indianapolis Colts"
+      }
+    },
+    {
+      "home": "Houston Texans",
+      "away": "Denver Broncos",
+      "winner": "Denver Broncos",
+      "picks": {
+        "matt": "Houston Texans",
+        "jarv": "Denver Broncos",
+        "gaz": "Houston Texans",
+        "joe": "Denver Broncos",
+        "ben": "Denver Broncos",
+        "coley": "Houston Texans",
+        "mark": "Denver Broncos",
+        "ste": "",
+        "tony": "missed",
+        "jay": "Denver Broncos",
+        "lee": "Denver Broncos",
+        "liam": "Denver Broncos"
+      }
+    },
+    {
+      "home": "Cincinnati Bengals",
+      "away": "Chicago Bears",
+      "winner": "Chicago Bears",
+      "picks": {
+        "matt": "Chicago Bears",
+        "jarv": "Chicago Bears",
+        "gaz": "Chicago Bears",
+        "joe": "Chicago Bears",
+        "ben": "Chicago Bears",
+        "coley": "Cincinnati Bengals",
+        "mark": "Chicago Bears",
+        "ste": "",
+        "tony": "missed",
+        "jay": "Cincinnati Bengals",
+        "lee": "Chicago Bears",
+        "liam": "Chicago Bears"
+      }
+    },
+    {
+      "home": "Green Bay Packers",
+      "away": "Carolina Panthers",
+      "winner": "Carolina Panthers",
+      "picks": {
+        "matt": "Green Bay Packers",
+        "jarv": "Green Bay Packers",
+        "gaz": "Green Bay Packers",
+        "joe": "Green Bay Packers",
+        "ben": "Green Bay Packers",
+        "coley": "Green Bay Packers",
+        "mark": "Green Bay Packers",
+        "ste": "",
+        "tony": "missed",
+        "jay": "Green Bay Packers",
+        "lee": "Green Bay Packers",
+        "liam": "Green Bay Packers"
+      }
+    }
+  ]
 }
 ]
