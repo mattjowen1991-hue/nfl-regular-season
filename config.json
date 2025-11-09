@@ -1,6 +1,7 @@
 {
   "season": "2025",
   "repoUrl": "https://github.com/your/repo",
+  "bestTeamMinPicks": 5,
   "highlight": {
     "winner": "matt",
     "spoon": "ste"
