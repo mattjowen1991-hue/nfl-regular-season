@@ -1549,5 +1549,162 @@
       }
     }
   ]
+},
+ {
+  "week": 11,
+  "games": [
+    {
+      "home": "Miami Dolphins",
+      "away": "Washington Commanders",
+      "winner": "Miami Dolphins",
+      "picks": {
+        "matt": "Miami Dolphins",
+        "jarv": "Miami Dolphins",
+        "gaz": "Miami Dolphins",
+        "joe": "Miami Dolphins",
+        "ben": "Washington Commanders",
+        "coley": "Washington Commanders",
+        "mark": "Miami Dolphins",
+        "ste": "Miami Dolphins",
+        "tony": "Miami Dolphins",
+        "jay": "Miami Dolphins",
+        "lee": "Miami Dolphins",
+        "liam": "Miami Dolphins"
+      }
+    },
+    {
+      "home": "New York Giants",
+      "away": "Green Bay Packers",
+      "winner": "Green Bay Packers",
+      "picks": {
+        "matt": "Green Bay Packers",
+        "jarv": "Green Bay Packers",
+        "gaz": "Green Bay Packers",
+        "joe": "Green Bay Packers",
+        "ben": "Green Bay Packers",
+        "coley": "Green Bay Packers",
+        "mark": "Green Bay Packers",
+        "ste": "Green Bay Packers",
+        "tony": "Green Bay Packers",
+        "jay": "Green Bay Packers",
+        "lee": "Green Bay Packers",
+        "liam": "Green Bay Packers"
+      }
+    },
+    {
+      "home": "Tennessee Titans",
+      "away": "Houston Texans",
+      "winner": "Houston Texans",
+      "picks": {
+        "matt": "Tennessee Titans",
+        "jarv": "Houston Texans",
+        "gaz": "Tennessee Titans",
+        "joe": "Tennessee Titans",
+        "ben": "Houston Texans",
+        "coley": "Houston Texans",
+        "mark": "Houston Texans",
+        "ste": "Houston Texans",
+        "tony": "Houston Texans",
+        "jay": "Houston Texans",
+        "lee": "Houston Texans",
+        "liam": "Houston Texans"
+      }
+    },
+    {
+      "home": "Atlanta Falcons",
+      "away": "Carolina Panthers",
+      "winner": "Carolina Panthers",
+      "picks": {
+        "matt": "Atlanta Falcons",
+        "jarv": "Atlanta Falcons",
+        "gaz": "Atlanta Falcons",
+        "joe": "Atlanta Falcons",
+        "ben": "Carolina Panthers",
+        "coley": "Atlanta Falcons",
+        "mark": "Atlanta Falcons",
+        "ste": "Atlanta Falcons",
+        "tony": "Atlanta Falcons",
+        "jay": "Atlanta Falcons",
+        "lee": "Carolina Panthers",
+        "liam": "Atlanta Falcons"
+      }
+    },
+    {
+      "home": "Minnesota Vikings",
+      "away": "Chicago Bears",
+      "winner": "Chicago Bears",
+      "picks": {
+        "matt": "Minnesota Vikings",
+        "jarv": "Minnesota Vikings",
+        "gaz": "Minnesota Vikings",
+        "joe": "Minnesota Vikings",
+        "ben": "Chicago Bears",
+        "coley": "Minnesota Vikings",
+        "mark": "Minnesota Vikings",
+        "ste": "Minnesota Vikings",
+        "tony": "Minnesota Vikings",
+        "jay": "Chicago Bears",
+        "lee": "Chicago Bears",
+        "liam": "Minnesota Vikings"
+      }
+    },
+    {
+      "home": "Jacksonville Jaguars",
+      "away": "Los Angeles Chargers",
+      "winner": "Jacksonville Jaguars",
+      "picks": {
+        "matt": "Los Angeles Chargers",
+        "jarv": "Los Angeles Chargers",
+        "gaz": "Los Angeles Chargers",
+        "joe": "Los Angeles Chargers",
+        "ben": "Los Angeles Chargers",
+        "coley": "Los Angeles Chargers",
+        "mark": "Los Angeles Chargers",
+        "ste": "Los Angeles Chargers",
+        "tony": "Jacksonville Jaguars",
+        "jay": "Jacksonville Jaguars",
+        "lee": "Los Angeles Chargers",
+        "liam": "Los Angeles Chargers"
+      }
+    },
+    {
+      "home": "Buffalo Bills",
+      "away": "Tampa Bay Buccaneers",
+      "winner": "Buffalo Bills",
+      "picks": {
+        "matt": "Buffalo Bills",
+        "jarv": "Buffalo Bills",
+        "gaz": "Buffalo Bills",
+        "joe": "Buffalo Bills",
+        "ben": "Buffalo Bills",
+        "coley": "Buffalo Bills",
+        "mark": "Buffalo Bills",
+        "ste": "Buffalo Bills",
+        "tony": "Tampa Bay Buccaneers",
+        "jay": "Buffalo Bills",
+        "lee": "Buffalo Bills",
+        "liam": "Buffalo Bills"
+      }
+    },
+    {
+      "home": "Pittsburgh Steelers",
+      "away": "Cincinnati Bengals",
+      "winner": "Pittsburgh Steelers",
+      "picks": {
+        "matt": "Pittsburgh Steelers",
+        "jarv": "Pittsburgh Steelers",
+        "gaz": "Pittsburgh Steelers",
+        "joe": "Pittsburgh Steelers",
+        "ben": "Pittsburgh Steelers",
+        "coley": "Cincinnati Bengals",
+        "mark": "Pittsburgh Steelers",
+        "ste": "Pittsburgh Steelers",
+        "tony": "Cincinnati Bengals",
+        "jay": "Pittsburgh Steelers",
+        "lee": "Pittsburgh Steelers",
+        "liam": "Pittsburgh Steelers"
+      }
+    }
+  ]
 }
 ]
