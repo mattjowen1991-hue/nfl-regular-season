@@ -1706,5 +1706,143 @@
       }
     }
   ]
+},
+ {
+  "week": 12,
+  "games": [
+    {
+      "home": "Minnesota Vikings",
+      "away": "Green Bay Packers",
+      "winner": "Green Bay Packers",
+      "picks": {
+        "matt": "Green Bay Packers",
+        "jarv": "Green Bay Packers",
+        "gaz": "Green Bay Packers",
+        "joe": "Green Bay Packers",
+        "ben": "Green Bay Packers",
+        "coley": "Minnesota Vikings",
+        "mark": "Green Bay Packers",
+        "ste": "Green Bay Packers",
+        "tony": "Green Bay Packers",
+        "jay": "Green Bay Packers",
+        "lee": "Green Bay Packers",
+        "liam": "Green Bay Packers"
+      }
+    },
+    {
+      "home": "New England Patriots",
+      "away": "Cincinnati Bengals",
+      "winner": "New England Patriots",
+      "picks": {
+        "matt": "New England Patriots",
+        "jarv": "New England Patriots",
+        "gaz": "New England Patriots",
+        "joe": "New England Patriots",
+        "ben": "New England Patriots",
+        "coley": "Cincinnati Bengals",
+        "mark": "New England Patriots",
+        "ste": "New England Patriots",
+        "tony": "New England Patriots",
+        "jay": "New England Patriots",
+        "lee": "New England Patriots",
+        "liam": "New England Patriots"
+      }
+    },
+    {
+      "home": "New York Giants",
+      "away": "Detroit Lions",
+      "winner": "Detroit Lions",
+      "picks": {
+        "matt": "Detroit Lions",
+        "jarv": "Detroit Lions",
+        "gaz": "Detroit Lions",
+        "joe": "Detroit Lions",
+        "ben": "Detroit Lions",
+        "coley": "Detroit Lions",
+        "mark": "Detroit Lions",
+        "ste": "Detroit Lions",
+        "tony": "Detroit Lions",
+        "jay": "Detroit Lions",
+        "lee": "Detroit Lions",
+        "liam": "Detroit Lions"
+      }
+    },
+    {
+      "home": "New York Jets",
+      "away": "Baltimore Ravens",
+      "winner": "Baltimore Ravens",
+      "picks": {
+        "matt": "Baltimore Ravens",
+        "jarv": "Baltimore Ravens",
+        "gaz": "Baltimore Ravens",
+        "joe": "Baltimore Ravens",
+        "ben": "Baltimore Ravens",
+        "coley": "Baltimore Ravens",
+        "mark": "Baltimore Ravens",
+        "ste": "Baltimore Ravens",
+        "tony": "Baltimore Ravens",
+        "jay": "Baltimore Ravens",
+        "lee": "Baltimore Ravens",
+        "liam": "Baltimore Ravens"
+      }
+    },
+    {
+      "home": "Pittsburgh Steelers",
+      "away": "Chicago Bears",
+      "winner": "Chicago Bears",
+      "picks": {
+        "matt": "Chicago Bears",
+        "jarv": "Chicago Bears",
+        "gaz": "Chicago Bears",
+        "joe": "Chicago Bears",
+        "ben": "Pittsburgh Steelers",
+        "coley": "Chicago Bears",
+        "mark": "Chicago Bears",
+        "ste": "Chicago Bears",
+        "tony": "Chicago Bears",
+        "jay": "Pittsburgh Steelers",
+        "lee": "Chicago Bears",
+        "liam": "Chicago Bears"
+      }
+    },
+    {
+      "home": "Seattle Seahawks",
+      "away": "Tennessee Titans",
+      "winner": "Seattle Seahawks",
+      "picks": {
+        "matt": "Seattle Seahawks",
+        "jarv": "Seattle Seahawks",
+        "gaz": "Seattle Seahawks",
+        "joe": "Seattle Seahawks",
+        "ben": "Seattle Seahawks",
+        "coley": "Seattle Seahawks",
+        "mark": "Seattle Seahawks",
+        "ste": "Seattle Seahawks",
+        "tony": "Seattle Seahawks",
+        "jay": "Seattle Seahawks",
+        "lee": "Seattle Seahawks",
+        "liam": "Seattle Seahawks"
+      }
+    },
+    {
+      "home": "Indianapolis Colts",
+      "away": "Kansas City Chiefs",
+      "winner": "Kansas City Chiefs",
+      "picks": {
+        "matt": "Kansas City Chiefs",
+        "jarv": "Kansas City Chiefs",
+        "gaz": "Kansas City Chiefs",
+        "joe": "Kansas City Chiefs",
+        "ben": "Indianapolis Colts",
+        "coley": "Kansas City Chiefs",
+        "mark": "Kansas City Chiefs",
+        "ste": "Kansas City Chiefs",
+        "tony": "Indianapolis Colts",
+        "jay": "Kansas City Chiefs",
+        "lee": "Indianapolis Colts",
+        "liam": "Kansas City Chiefs"
+      }
+    }
+  ]
 }
 ]
