@@ -1844,5 +1844,67 @@
       }
     }
   ]
+},
+ {
+  "week": 13,
+  "games": [
+    {
+      "home": "Baltimore Ravens",
+      "away": "Cincinnati Bengals",
+      "winner": "Cincinnati Bengals",
+      "picks": {
+        "matt": "Baltimore Ravens",
+        "jarv": "Baltimore Ravens",
+        "gaz": "Baltimore Ravens",
+        "joe": "Baltimore Ravens",
+        "ben": "Baltimore Ravens",
+        "coley": "Baltimore Ravens",
+        "mark": "Baltimore Ravens",
+        "ste": "Baltimore Ravens",
+        "tony": "Cincinnati Bengals",
+        "jay": "Baltimore Ravens",
+        "lee": "Cincinnati Bengals",
+        "liam": "Baltimore Ravens"
+      }
+    },
+    {
+      "home": "Detroit Lions",
+      "away": "Green Bay Packers",
+      "winner": "Green Bay Packers",
+      "picks": {
+        "matt": "Detroit Lions",
+        "jarv": "Detroit Lions",
+        "gaz": "Detroit Lions",
+        "joe": "Detroit Lions",
+        "ben": "missed",
+        "coley": "Detroit Lions",
+        "mark": "Detroit Lions",
+        "ste": "Detroit Lions",
+        "tony": "missed",
+        "jay": "Detroit Lions",
+        "lee": "missed",
+        "liam": "Detroit Lions"
+      }
+    },
+    {
+      "home": "Dallas Cowboys",
+      "away": "Kansas City Chiefs",
+      "winner": "Dallas Cowboys",
+      "picks": {
+        "matt": "Kansas City Chiefs",
+        "jarv": "Kansas City Chiefs",
+        "gaz": "Kansas City Chiefs",
+        "joe": "Kansas City Chiefs",
+        "ben": "Dallas Cowboys",
+        "coley": "Dallas Cowboys",
+        "mark": "Kansas City Chiefs",
+        "ste": "Dallas Cowboys",
+        "tony": "Kansas City Chiefs",
+        "jay": "Dallas Cowboys",
+        "lee": "Kansas City Chiefs",
+        "liam": "Kansas City Chiefs"
+      }
+    }
+  ]
 }
 ]
