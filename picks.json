@@ -2496,5 +2496,67 @@
       }
     }
   ]
+},
+ {
+  "week": 16.5,
+  "games": [
+    {
+      "home": "Washington Commanders",
+      "away": "Dallas Cowboys",
+      "winner": "Dallas Cowboys",
+      "picks": {
+        "matt": "Dallas Cowboys",
+        "jarv": "Dallas Cowboys",
+        "gaz": "Dallas Cowboys",
+        "joe": "Dallas Cowboys",
+        "ben": "Dallas Cowboys",
+        "coley": "Washington Commanders",
+        "mark": "Dallas Cowboys",
+        "ste": "Dallas Cowboys",
+        "tony": "Dallas Cowboys",
+        "jay": "Dallas Cowboys",
+        "lee": "Dallas Cowboys",
+        "liam": "Dallas Cowboys"
+      }
+    },
+    {
+      "home": "Minnesota Vikings",
+      "away": "Detroit Lions",
+      "winner": "Minnesota Vikings",
+      "picks": {
+        "matt": "Detroit Lions",
+        "jarv": "Detroit Lions",
+        "gaz": "Detroit Lions",
+        "joe": "Minnesota Vikings",
+        "ben": "Detroit Lions",
+        "coley": "Minnesota Vikings",
+        "mark": "Detroit Lions",
+        "ste": "Detroit Lions",
+        "tony": "Detroit Lions",
+        "jay": "Detroit Lions",
+        "lee": "Minnesota Vikings",
+        "liam": "Detroit Lions"
+      }
+    },
+    {
+      "home": "Kansas City Chiefs",
+      "away": "Denver Broncos",
+      "winner": "Denver Broncos",
+      "picks": {
+        "matt": "Denver Broncos",
+        "jarv": "Denver Broncos",
+        "gaz": "Denver Broncos",
+        "joe": "Denver Broncos",
+        "ben": "Denver Broncos",
+        "coley": "Kansas City Chiefs",
+        "mark": "Denver Broncos",
+        "ste": "Denver Broncos",
+        "tony": "Denver Broncos",
+        "jay": "Denver Broncos",
+        "lee": "Denver Broncos",
+        "liam": "Denver Broncos"
+      }
+    }
+  ]
 }
 ]
