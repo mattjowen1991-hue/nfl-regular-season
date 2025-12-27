@@ -370,13 +370,16 @@
     value = p.perWeek[selectedWeek] ?? 0; 
     
     // Check if it is a special week
-if (selectedWeek === 12.5) {
-  label = "Thanksgiving 🦃";
-} else if (selectedWeek === 16.5) {
-  label = "Christmas 🎄";
-} else {
-  label = `Week ${selectedWeek}`;
-}
+    if (selectedWeek === 12.5) {
+      label = "Thanksgiving 🦃";
+    } else if (selectedWeek === 16.5) {
+      label = "Christmas 🎄";
+    } else {
+      label = `Week ${selectedWeek}`;
+    }
+  }
+
+  return `
 
   return `
       <article class="player-card" data-player="${p.id}">
