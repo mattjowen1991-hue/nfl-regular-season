@@ -369,13 +369,14 @@
     if(view === 'week'){ 
     value = p.perWeek[selectedWeek] ?? 0; 
     
-    // Check if it is our special Thanksgiving week
-    if(selectedWeek === 12.5) {
-      label = "Thanksgiving 🦃";
-    } else {
-      label = `Week ${selectedWeek}`;
-    }
-  }
+    // Check if it is a special week
+if (selectedWeek === 12.5) {
+  label = "Thanksgiving 🦃";
+} else if (selectedWeek === 16.5) {
+  label = "Christmas 🎄";
+} else {
+  label = `Week ${selectedWeek}`;
+}
 
   return `
       <article class="player-card" data-player="${p.id}">
@@ -735,9 +736,16 @@
 const weekSel = document.getElementById('weekSelect');
 const totalBtn = document.getElementById('totalBtn');
 
-// UPDATED LOGIC: Checks for 12.5 to show text, otherwise shows number
+// UPDATED LOGIC: Checks for special weeks
 weekSel.innerHTML = state.weekNums.map(w => {
-  const label = (w === 12.5) ? "Thanksgiving 🦃" : `Week ${w}`;
+  let label;
+  if (w === 12.5) {
+    label = "Thanksgiving 🦃";
+  } else if (w === 16.5) {
+    label = "Christmas 🎄";
+  } else {
+    label = `Week ${w}`;
+  }
   return `<option value="${w}">${label}</option>`;
 }).join('');
 
