@@ -364,11 +364,6 @@
   </style>
 </head>
 <body>
-  <!-- Loading Overlay -->
-<div class="loading-overlay" id="loadingOverlay">
-  <div class="loading-spinner"></div>
-  <div class="loading-text">Loading League...</div>
-</div>
   <header class="max-w-xl mx-auto px-4 pt-6 pb-3">
     <div class="flex items-center justify-center">
       <img src="Assets/nfl-logo.png" alt="NFL" class="w-12 h-12 rounded-md shadow-lg">
@@ -1428,13 +1423,8 @@ if(state.weekNums.length){ weekSel.value = String(state.weekNums[0]); } // Week 
       if(repoLink) repoLink.href = config?.repoUrl || '#';
       document.getElementById('copyrightYear').textContent = new Date().getFullYear();
 
-      // Hide loading overlay
-document.getElementById('loadingOverlay').classList.add('hidden');
-
    }catch(err){
-  // Hide loading overlay even on error
-  document.getElementById('loadingOverlay').classList.add('hidden');
-  
+
   console.error(err);
   const msg = document.createElement('div');
       msg.className = 'fixed bottom-4 left-1/2 -translate-x-1/2 bg-red-600 text-white px-4 py-2 rounded-xl text-sm shadow-lg';
