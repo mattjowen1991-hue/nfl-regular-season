@@ -18,5 +18,5 @@
   { "week": 16, "scores": { "matt": 6, "jarv": 5, "gaz": 5, "joe": 9, "ben": 5, "coley": 4, "mark": 5, "ste": 5, "tony": 0, "jay": 0, "lee": 5, "liam": 4 } },
   { "week": 16.5, "scores": { "matt": 4, "jarv": 4, "gaz": 4, "joe": 6, "ben": 4, "coley": 2, "mark": 4, "ste": 4, "tony": 4, "jay": 4, "lee": 6, "liam": 4 } },
   { "week": 17, "scores": { "matt": 5, "jarv": 5, "gaz": 5, "joe": 4, "ben": 5, "coley": 5, "mark": 5, "ste": 5, "tony": 5, "jay": 6, "lee": 4, "liam": 5 } },
-  {"week":18,"scores":{"matt":8,"jarv":8,"gaz":8,"joe":8,"ben":8,"coley":6,"mark":8,"ste":8,"tony":8,"jay":8,"lee":6,"liam":8}},
+  {"week":18,"scores":{"matt":8,"jarv":8,"gaz":8,"joe":8,"ben":8,"coley":6,"mark":8,"ste":8,"tony":8,"jay":8,"lee":6,"liam":8}}
 ]
