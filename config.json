@@ -3,10 +3,11 @@
   "repoUrl": "https://github.com/your/repo",
   "bestTeamMinPicks": 5,
   "highlight": {
-    "winner": "matt",
-    "spoon": "ste"
+    "winner": "joe",
+    "spoon": "tony"
   },
   "honorary": [
+    { "year": 2025, "player": "joe" },
     { "year": 2024, "player": "matt" },
     { "year": 2023, "player": "gaz" },
     { "year": 2022, "player": "ste" },
