@@ -1,4 +1,4 @@
-const CACHE_NAME = 'nfl-league-v2';
+const CACHE_NAME = 'nfl-league-v3';
 const urlsToCache = [
   '/nfl-regular-season/',
   '/nfl-regular-season/index.html'
