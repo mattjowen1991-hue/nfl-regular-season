@@ -1233,8 +1233,8 @@
 
     // Best Team Accuracy (show team name + percentage)
     document.getElementById('statBestTeam').textContent = bestTeam
-      ? `${bestTeam.team.split(' ').pop()} (${bestTeam.pct}%)`
-      : '—';
+  ? bestTeam.team.split(' ').pop()
+  : '—';
 
     // Correct Picks (e.g., "89/134")
     document.getElementById('statCorrectPicks').textContent = pickAcc
