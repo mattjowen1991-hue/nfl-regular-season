@@ -639,6 +639,71 @@ The league table's player stats modal shows comprehensive statistics:
 }
 ```
 
+## Data Sources
+
+### Primary Data (JSONBin - Updated via Admin Dashboard)
+
+| Data | Bin | Description |
+|------|-----|-------------|
+| Weekly scores | SCORES_BIN_ID | All player scores for each week |
+| Perfect week points | SCORES_BIN_ID (config) | Target scores for perfect week calculation |
+| Picks history | PICKS_HISTORY_BIN_ID | Detailed pick data for stats (win rate, best team, most picked, correct picks) |
+
+### Static Data (GitHub - Rarely Updated)
+
+| File | Purpose | When to Update |
+|------|---------|----------------|
+| `players.json` | Player info (avatars, teams, championship wins) | When adding/removing players or updating championship wins |
+| `config.json` | Season settings (highlight winner/spoon, Hall of Fame) | At end of season |
+
+### Auto-Fetched Data
+
+| Data | Source | Description |
+|------|--------|-------------|
+| Next game schedules | ESPN API | Automatically fetched and cached for 1 hour |
+
+### Backup/Fallback Files (No Longer Need Updates)
+
+These files are only used if JSONBin is unavailable:
+
+- `weeks.json` - Fallback for weekly scores
+- `picks.json` - Fallback for picks history
+- `schedule.json` - Fallback for game schedules (ESPN API now handles this)
+
+---
+
+### Config.json Structure
+```json
+{
+  "season": "2025",
+  "repoUrl": "https://github.com/your/repo",
+  "bestTeamMinPicks": 5,
+  "highlight": {
+    "winner": "matt",
+    "spoon": "ste"
+  },
+  "honorary": [
+    { "year": 2024, "player": "matt" },
+    { "year": 2023, "player": "gaz" }
+  ]
+}
+```
+
+### Players.json Structure
+```json
+[
+  {
+    "id": "matt",
+    "name": "Matt",
+    "avatar": "Assets/matt.png",
+    "team": "San Francisco 49ers",
+    "teamLogo": "Assets/san-francisco-49ers.png",
+    "superbowlWins": 0,
+    "nflWins": 1
+  }
+]
+```
+
 ### Before Next Season
 
 - Update `season` in config.json
