@@ -525,12 +525,14 @@
      JSONBIN CONFIGURATION
      ============================================ */
   const JSONBIN_CONFIG = {
-    // League Scores Bin ID - same as admin dashboard
-    SCORES_BIN_ID: '6951c2b0ae596e708fb6c625',
-    // Picks History Bin ID - for detailed stats
-    PICKS_HISTORY_BIN_ID: '695317c4ae596e708fb8f9ec',
-    API_KEY: '$2a$10$C7BY0Kl0u74gNn/kXO7xNuayWv493/f1jAxlHUmx3ENADQKDii61C'
-  };
+  // League Scores Bin ID - same as admin dashboard
+  SCORES_BIN_ID: '6951c2b0ae596e708fb6c625',
+  // Picks History Bin ID - for detailed stats
+  PICKS_HISTORY_BIN_ID: '695317c4ae596e708fb8f9ec',
+  // Season Archives Bin ID - historical data
+  ARCHIVES_BIN_ID: '695ae9bed0ea881f4054826e',
+  API_KEY: '$2a$10$C7BY0Kl0u74gNn/kXO7xNuayWv493/f1jAxlHUmx3ENADQKDii61C'
+};
 
     // Load picks history from JSONBin (for detailed stats)
   async function loadPicksHistory() {
