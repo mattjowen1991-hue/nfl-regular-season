@@ -237,6 +237,35 @@
       text-transform: uppercase;
       letter-spacing: 0.15em;
     }
+
+    .champion-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.champion-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 4px solid var(--gold);
+  object-fit: cover;
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.6);
+  animation: avatarPulse 2s ease-in-out infinite;
+}
+
+@keyframes avatarPulse {
+  0%, 100% { transform: scale(1); box-shadow: 0 0 20px rgba(212, 175, 55, 0.6); }
+  50% { transform: scale(1.05); box-shadow: 0 0 30px rgba(212, 175, 55, 0.9); }
+}
+
+@media (max-width: 640px) {
+  .champion-avatar {
+    width: 60px;
+    height: 60px;
+  }
+}
     
     /* Falling money animation */
     .money-rain {
@@ -355,26 +384,29 @@
   <main class="max-w-6xl mx-auto px-4 sm:px-6 pb-24 space-y-6">
     
     <!-- Prize Pot -->
-    <section class="prize-pot-section">
-      <div class="prize-pot-container">
-        <div class="money-rain">
-          <span class="money">💵</span>
-          <span class="money">💷</span>
-          <span class="money">💰</span>
-          <span class="money">💵</span>
-          <span class="money">💷</span>
-          <span class="money">💰</span>
-          <span class="money">💵</span>
-          <span class="money">💷</span>
-        </div>
-        <div class="prize-pot-inner">
-          <div class="trophy-icon">🏆</div>
-          <div class="prize-label">Winner Takes All</div>
-          <div class="prize-amount">£120</div>
-          <div class="prize-subtitle">12 Players × £10 Entry</div>
-        </div>
+<section class="prize-pot-section">
+  <div class="prize-pot-container">
+    <div class="money-rain">
+      <span class="money">💵</span>
+      <span class="money">☘️</span>
+      <span class="money">💰</span>
+      <span class="money">☘️</span>
+      <span class="money">💷</span>
+      <span class="money">☘️</span>
+      <span class="money">💵</span>
+      <span class="money">☘️</span>
+    </div>
+    <div class="prize-pot-inner">
+      <div class="trophy-icon">👑</div>
+      <div class="champion-row">
+        <img src="Assets/joe.png" alt="Joe" class="champion-avatar">
+        <div class="prize-amount">Joe!</div>
       </div>
-    </section>
+      <div class="prize-label">2025 Champion</div>
+      <div class="prize-subtitle">£120 Won 🍀</div>
+    </div>
+  </div>
+</section>
 
     <!-- Weekly Scores -->
     <section class="card p-5 sm:p-7">
@@ -395,7 +427,7 @@
 
     <!-- Season Highlight -->
     <section class="card p-5 sm:p-7">
-      <h3 class="riddle-title text-xl sm:text-2xl font-extrabold">2024 Season Highlights</h3>
+      <h3 class="riddle-title text-xl sm:text-2xl font-extrabold">2025 Season Highlights</h3>
       <div id="highlight" class="mt-4 grid sm:grid-cols-2 gap-6">
   <div class="section-loading">
     <div class="section-spinner"></div>
